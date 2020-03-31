@@ -1,0 +1,91 @@
+- week: 1
+  goals:
+  - goal: Blink LED
+    tasks: 
+    - Install Arduino IDE
+    - Upload example code
+    deliverable: Video showing LED blinking
+    points: 4
+  - goal: Write data to file
+    tasks: 
+    - Write code to output "Hello World" to file
+    deliverable: Screen capture of console running ls && helloworld.py && ls
+    points: 1
+  - goal: Compute Fibonacci sequence
+    tasks: 
+    - Read up on Fibonacci sequence
+    - Write code based on recursive algorithm
+    - Generate plot
+    deliverable: Plots of first 5, 20, 100 Fibonacci numbers
+    points: 5
+- week: 2
+  goals:
+  - goal: goal A
+    tasks: 
+    - Task A1
+    - Task A2
+    deliverable: deliverable A
+    points: 6
+  - goal: goal B
+    tasks: 
+    - Task B1
+    - Task B2
+    - Task B3
+    deliverable: deliverable B
+    points: 4
+- week: 3
+  goals:
+  - goal: goal A
+    tasks: 
+    - Task A
+    deliverable: deliverable A
+    points: 10
+- week: 4
+  goals:
+  - goal: goal A
+    tasks: 
+    - Task A
+    deliverable: deliverable A
+    points: 10
+- week: 5
+  goals:
+  - goal: goal A
+    tasks: 
+    - Task A
+    deliverable: deliverable A
+    points: 10
+- week: 6
+  goals:
+  - goal: goal A
+    tasks: 
+    - Task A
+    deliverable: deliverable A
+    points: 10
+- week: 7
+  goals:
+  - goal: goal A
+    tasks: 
+    - Task A
+    deliverable: deliverable A
+    points: 10
+- week: 8
+  goals:
+  - goal: goal A
+    tasks: 
+    - Task A
+    deliverable: deliverable A
+    points: 10
+- week: 9
+  goals:
+  - goal: goal A
+    tasks: 
+    - Task A
+    deliverable: deliverable A
+    points: 10
+- week: 10
+  goals:
+  - goal: goal A
+    tasks: 
+    - Task A
+    deliverable: deliverable A
+    points: 10

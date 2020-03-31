@@ -1,0 +1,133 @@
+- week: 1
+  goals:
+  - goal: A simulation of a world
+    tasks: 
+    - Follow the cyberbotics tutorials to get a general understanding of the Webots software
+    - Create a new world
+    deliverable: A world created using the Webots software
+    points: 2
+  - goal: A robotic arm in the world
+    tasks: 
+    - Add a robotic arm to the world
+    deliverable: Digital representations of the robotic arm
+    points: 2
+  - goal: Test surfaces included in world
+    tasks: 
+    - Add different objects to the world
+    deliverable: Digital representations of various test surfaces
+    points: 2
+  - goal: Pencil attached to robotic arm
+    tasks: 
+    - Attach pencil to robotic arm so it can draw
+    deliverable: Video demonstation of the arm holding the pencil
+    points: 2
+  - goal: Robot arm controlled movement
+    tasks: 
+    - Send commands to the robotic arm
+    deliverable: Video demonstation of the arm reacting to basic commands
+    points: 2
+- week: 2
+  goals:
+  - goal: Camera, Pressure, and Lidar Sensor
+    tasks: 
+    - Figure out how to add and get sensor output from the world
+    - Add a camera sensor measuring the position of the robot
+    - Add a pressure sensor measuring the pressure of the pencil on the paper
+    - Add a lidar sensor measuring the distance from the camera to the robot arm
+    deliverable: A video of a robot arm movements being measured by simulated sensors
+    points: 4
+  - goal: Use OpenCV to localize arm if possible
+    tasks: 
+    - Determine whether OpenCV works well with simulated arm
+    deliverable: Digital representations of OpenCV functionality with the simulation
+    points: 2
+  - goal: Calculate simulated error
+    tasks: 
+    - Determine expected position versus actual position after given commands
+    - Add error to the robotic arm’s movement
+    - Ensure sensors have some inaccuracies in their readings 
+    deliverable: A video demonstrating simulated error
+    points: 4
+- week: 3
+  goals:
+  - goal: goal A
+    tasks: 
+    - Task A
+    deliverable: deliverable A
+    points: 10
+- week: 4
+  goals:
+  - goal: goal A
+    tasks: 
+    - Task A
+    deliverable: deliverable A
+    points: 10
+- week: 5
+  goals:
+  - goal: goal A
+    tasks: 
+    - Task A
+    deliverable: deliverable A
+    points: 10
+- week: 6
+  goals:
+  - goal: Detect image edges
+    tasks: 
+    - Segment the image using an edge detector
+    deliverable: The image of the result of edge detection applied to the image
+    points: 3
+  - goal: Generate dicrete commands from segmented image
+    tasks: 
+    - Find the best mask to convolve image with to get discrete points from edge detection
+    - Apply mask to get resulting image
+    deliverable: The image after getting discrete points to interpolate between
+    points: 3
+  - goal: Project image onto 3D surface
+    tasks: 
+    - Use the same 2D-3D mapping found in week 3 to map the instruction points to 3D surface
+    deliverable: The resulting 3D image after projection onto our 3D model
+    points: 2
+  - goal: Generate a list of instructions from the resulting 3D image
+    tasks: 
+    - Extract points from the image
+    - Convert 3D points to instuctions
+    deliverable: List of instructions from the 3D image
+    points: 2
+- week: 7
+  goals:
+  - goal: Robotic arm processes instructions and executes corresponding commands
+    tasks: 
+    - From a list of instuctions send corresponding commands to the robotic arm
+    deliverable: A video of the robot drawing the image
+    points: 5
+  - goal: Interpolate between discrete points
+    tasks: 
+    - Try to incorporate the pressure sensor into our interpolation algorithm so the arm stays on the surface
+    deliverable: The algorithm we used for interpolating between points
+    points: 5
+- week: 8
+  goals:
+  - goal: Reduce error in image drawing
+    tasks: 
+    - Try alternative techniques to reduce error in the system
+    deliverable: Video comparing the drawing done from the previous week and this week
+    points: 5
+  - goal: Improve speed, accuracy, or balance tradeoffs
+    tasks: 
+    - Explore alternate techniques to improve speed and accuracy, and balance tradeoffs
+    deliverable: Description of changes made for improvements
+    points: 5
+- week: 9
+  goals:
+  - goal: goal A
+    tasks: 
+    - Task A
+    deliverable: deliverable A
+    points: 10
+- week: 10
+  goals:
+  - goal: goal A
+    tasks: 
+    - Task A
+    deliverable: deliverable A
+    points: 10
