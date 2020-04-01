@@ -38,6 +38,7 @@ for teamname, yamldata in data.items():
             print ("  Deliverable: %s" % g["deliverable"])
             for t in g["tasks"]:
                 print ("    - %s" % t)
+	# print(total)
         assert(total == 10)
 
 

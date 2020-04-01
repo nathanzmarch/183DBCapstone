@@ -75,9 +75,9 @@
     - Explore ideal placement for lidar and pressure sensors
     deliverable: 
     - A video demonstration of our final simulation set-up that combines all components. 
-    - Camera, lidar, and pressure sensors should give meaningful data and efficiently capture all robot movements (2)
+    - Camera, lidar, and pressure sensors should give meaningful data and efficiently capture all robot movements (3)
     - Robot arm should be able to draw basic lines using the pencil (2)
-    points: 4
+    points: 5
 
 - week: 4
   goals:
@@ -89,16 +89,16 @@
     deliverable:
       - A powerpoint presentation displaying our measurement and dynamic models (1)
       - Equations used in our models and EKF design (2)
-      - An algorithm to generate commands to adjust for errors in movement (3)
-    points: 6
+      - An algorithm to generate commands to adjust for errors in movement (2)
+    points: 5
   - goal: Get Sensor Measurements
     tasks:
     - Create a measurement model of the sensors (camera, lidar, and pressure)
     deliverable: 
     - A video of our simulated robot performing stable 2D motion
     - Noting corrective commands during the motion (3)
-    - Containing a log of estimated state vs. actual state for each time step (3)
-    points: 6
+    - Containing a log of estimated state vs. actual state for each time step (2)
+    points: 5
 
 - week: 5
   goals:
@@ -111,16 +111,16 @@
     deliverable:
     - A powerpoint presentation displaying our measurement and dynamic models (1)
     - Equations used in our models and EKF design (2)
-    - An algorithm to generate commands to adjust for errors in movement (3)
-    points: 6
+    - An algorithm to generate commands to adjust for errors in movement (2)
+    points: 5
   - goal: Visualise simulation
     tasks:
     - Simulate the robot performing desired tasks
     deliverable: 
     - A video of our simulated robot performing stable 2D motion
     - Noting corrective commands during the motion (3)
-    - Containing a log of estimated state vs. actual state for each time step (3)
-    points: 6
+    - Containing a log of estimated state vs. actual state for each time step (2)
+    points: 5
 
 - week: 6
   goals:
@@ -170,12 +170,12 @@
     tasks:
     - Explore alternate techniques to improve speed and accuracy, and balance tradeoffs
     deliverable: Description of changes made for improvements
-    points: 5
+    points: 3
   - goal: Summarize dependencies and expected conclusions
     tasks:
     - Formalize our dependencies and expected conclusions
     deliverable: A list of dependencies and expected conclusions
-    points: 3
+    points: 2
 
 - week: 9
   goals:
@@ -194,14 +194,14 @@
     tasks:
       - Explore the strengths and limitations of the system by performing a task on different surfaces.
     deliverable: Generate 9 resulting simulations that showcase performance
-    points: 4
+    points: 2
   - goal: Measure Performance (error)
     tasks:
       - Measure the Error between projected images and resulting printed images.
     deliverable: >
       Make figures that showcase error between projected image and resulting printed
       image depending on surface and image complexity
-    points: 4
+    points: 2
   - goal: Reflect on results
     tasks:
       - Think about what could be explored in the future to build on our project.
@@ -209,7 +209,7 @@
       Make conclusions about observed results and how our approach
       contributes to the broader field of robotics and what are the potential
       future questions and improvements for our approach.
-    points: 6
+    points: 2
 
 - week: 10
   goals:
@@ -222,7 +222,7 @@
     tasks:
       - Finished presentation, write-up, relevant figures, github repo and readme file.
     deliverable: Slide Presentation
-    points: 4
+    points: 2
   - goal: Reflection on results and future work
     tasks:
       - Reflect on findings
@@ -234,7 +234,7 @@
     - Practice showcasing running the simulation and system setup.
     - Finished presentation, write-up, relevant figures, github repo and readme file.
     deliverable: Demonstration of simulated system performance
-    points: 4
+    points: 2
   - goal: Share our insights and get feedback
     tasks:
       - Prepare to answer possible questions.
