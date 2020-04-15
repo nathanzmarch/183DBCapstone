@@ -4,8 +4,8 @@ WorldInfo {
 }
 Viewpoint {
   fieldOfView 0.85
-  orientation -0.17280351978733677 -0.9070384225944403 -0.38395343921691455 2.366439031722555
-  position -7.185589506905476 10.552870557809909 -1.7190962324864758
+  orientation 0.13034551537308997 -0.9540975488341978 -0.2696440504270379 4.005865378660773
+  position 5.801402103420611 4.382430003787933 3.125245964100338
   follow "robot:IRB 4600/40:solid:solid:solid:solid:solid:solid:pen"
   followType "Pan and Tilt Shot"
 }
@@ -46,6 +46,13 @@ SolidRoundedBox {
 Robot {
   translation -1 0 4.84
   children [
+    Darwin-op {
+      translation 1 1 0.95
+      rotation 0 1 0 1.5708
+      controller "visual_tracking"
+      cameraWidth 360
+      cameraHeight 360
+    }
     Table {
       size 3 0.74 3
       feetPadding 0.05

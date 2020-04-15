@@ -94,9 +94,9 @@ while supervisor.step(timeStep) != -1:
     z = 0.23
     noise = np.random.normal(0, 0.01, 3)
     #Apply Noise
-    x += noise[0]
-    y += noise[1]
-    z += noise[2]
+    # x += noise[0]
+    # y += noise[1]
+    # z += noise[2]
 
     # Call "ikpy" to compute the inverse kinematics of the arm.
     ikResults = armChain.inverse_kinematics([
