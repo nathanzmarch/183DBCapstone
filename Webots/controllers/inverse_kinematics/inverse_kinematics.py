@@ -23,7 +23,7 @@ except ImportError:
              'To run this sample, please upgrade "pip" and install ikpy with this command: "pip install ikpy"')
 
 import math
-from controller import Supervisor
+from controller import Supervisor, Camera, CameraRecognitionObject
 import numpy as np
 
 # Create the arm chain.
@@ -82,7 +82,11 @@ for motorName in ['A motor', 'B motor', 'C motor', 'D motor', 'E motor', 'F moto
 # Get the arm and target nodes.
 target = supervisor.getFromDef('TARGET')
 arm = supervisor.getFromDef('ARM')
+trans_field = arm.getField("translation")
 
+
+# cam1 = supervisor.getCamera("cam1")
+# cam1.enable()
 # Loop 1: Draw a circle on the paper sheet.
 print('Draw a circle on the paper sheet...')
 while supervisor.step(timeStep) != -1:
@@ -92,6 +96,7 @@ while supervisor.step(timeStep) != -1:
     x = 0.25 * math.cos(t) + 1.1
     y = 0.25 * math.sin(t) - 0.95
     z = 0.23
+    
     noise = np.random.normal(0, 0.01, 3)
     #Apply Noise
     # x += noise[0]
@@ -105,7 +110,8 @@ while supervisor.step(timeStep) != -1:
         [0, 0, 1, z],
         [0, 0, 0, 1]
     ])
-
+    values = trans_field.getSFVec3f()
+    print("ARM is at position: %g %g %g" % (values[0], values[1], values[2]))
     # Actuate the 3 first arm motors with the IK results.
     for i in range(3):
         motors[i].setPosition(ikResults[i + 1])
@@ -133,7 +139,8 @@ while supervisor.step(timeStep) != -1:
     x = targetPosition[0] - armPosition[0]
     y = - (targetPosition[2] - armPosition[2])
     z = targetPosition[1] - armPosition[1]
-
+    values = trans_field.getSFVec3f()
+    print("ARM is at position: %g %g %g" % (values[0], values[1], values[2]))
     # Call "ikpy" to compute the inverse kinematics of the arm.
     ikResults = armChain.inverse_kinematics([
         [1, 0, 0, x],
@@ -145,3 +152,7 @@ while supervisor.step(timeStep) != -1:
     # Actuate the 3 first arm motors with the IK results.
     for i in range(3):
         motors[i].setPosition(ikResults[i + 1])
+
+while supervisor.step(TIME_STEP) != -1:
+    values = trans_field.getSFVec3f()
+    print("ARM is at position: %g %g %g" % (values[0], values[1], values[2]))

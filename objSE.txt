@@ -1,0 +1,1449 @@
+INFO: Video recording starts when you run a simulation...
+[inverse_kinematics] ARM is at position: 0.998552 0.661973 -0.000850091
+[objRecController] 
+[objRecController] Recognized 2 objects.
+[objRecController] Model of object 0: 
+[objRecController] Id of object 0: 553
+[objRecController] Relative position of object 0: -0.852992 0.129192 -2.686674
+[objRecController] Relative orientation of object 0: 0.763857 0.044750 -0.643833 2.488802
+[objRecController] Size of object 0: 0.400000 0.400000
+[objRecController] Position of the object 0 on the camera image: 41 157
+[objRecController] Size of the object 0 on the camera image: 81 70
+[objRecController] - Color 1/1: 0.000000 1.000000 0.000000
+[objRecController] Model of object 1: oil barrel
+[objRecController] Id of object 1: 1216
+[objRecController] Relative position of object 1: 0.125190 0.232214 -3.869999
+[objRecController] Relative orientation of object 1: 0.095016 0.703906 -0.703909 2.952130
+[objRecController] Size of object 1: 0.610000 0.610003
+[objRecController] Position of the object 1 on the camera image: 196 150
+[objRecController] Size of the object 1 on the camera image: 77 78
+[objRecController] - Color 1/1: 0.400000 0.100000 0.100000
+[objRecController] 
+[objRecController] Recognized 2 objects.
+[objRecController] Model of object 0: 
+[objRecController] Id of object 0: 553
+[objRecController] Relative position of object 0: 0.852992 0.623325 -5.870818
+[objRecController] Relative orientation of object 0: -0.452215 -0.832113 -0.321076 2.182908
+[objRecController] Size of object 0: 0.400000 0.400000
+[objRecController] Position of the object 0 on the camera image: 243 133
+[objRecController] Size of the object 0 on the camera image: 34 33
+[objRecController] - Color 1/1: 0.000000 1.000000 0.000000
+[objRecController] Model of object 1: oil barrel
+[objRecController] Id of object 1: 1216
+[objRecController] Relative position of object 1: -0.125190 -0.560000 -5.767800
+[objRecController] Relative orientation of object 1: 0.000000 -1.000000 0.000000 0.268344
+[objRecController] Size of object 1: 0.610000 0.880000
+[objRecController] Position of the object 1 on the camera image: 170 224
+[objRecController] Size of the object 1 on the camera image: 49 71
+[objRecController] - Color 1/1: 0.400000 0.100000 0.100000
+[inverse_kinematics] ARM is at position: 0.998552 0.661973 -0.000850092
+[objRecController] 
+[objRecController] Recognized 2 objects.
+[objRecController] Model of object 0: 
+[objRecController] Id of object 0: 553
+[objRecController] Relative position of object 0: -0.852987 0.129197 -2.686674
+[objRecController] Relative orientation of object 0: 0.763855 0.044750 -0.643834 2.488802
+[objRecController] Size of object 0: 0.400000 0.400000
+[objRecController] Position of the object 0 on the camera image: 41 157
+[objRecController] Size of the object 0 on the camera image: 81 70
+[objRecController] - Color 1/1: 0.000000 1.000000 0.000000
+[objRecController] Model of object 1: oil barrel
+[objRecController] Id of object 1: 1216
+[objRecController] Relative position of object 1: 0.125190 0.232214 -3.869999
+[objRecController] Relative orientation of object 1: 0.095016 0.703906 -0.703909 2.952130
+[objRecController] Size of object 1: 0.610000 0.610003
+[objRecController] Position of the object 1 on the camera image: 196 150
+[objRecController] Size of the object 1 on the camera image: 77 78
+[objRecController] - Color 1/1: 0.400000 0.100000 0.100000
+[objRecController] 
+[objRecController] Recognized 2 objects.
+[objRecController] Model of object 0: 
+[objRecController] Id of object 0: 553
+[objRecController] Relative position of object 0: 0.852987 0.623325 -5.870812
+[objRecController] Relative orientation of object 0: -0.452216 -0.832113 -0.321075 2.182905
+[objRecController] Size of object 0: 0.400000 0.400000
+[objRecController] Position of the object 0 on the camera image: 243 133
+[objRecController] Size of the object 0 on the camera image: 34 33
+[objRecController] - Color 1/1: 0.000000 1.000000 0.000000
+[objRecController] Model of object 1: oil barrel
+[objRecController] Id of object 1: 1216
+[objRecController] Relative position of object 1: -0.125190 -0.560000 -5.767800
+[objRecController] Relative orientation of object 1: 0.000000 -1.000000 0.000000 0.268344
+[objRecController] Size of object 1: 0.610000 0.880000
+[objRecController] Position of the object 1 on the camera image: 170 224
+[objRecController] Size of the object 1 on the camera image: 49 71
+[objRecController] - Color 1/1: 0.400000 0.100000 0.100000
+[inverse_kinematics] ARM is at position: 0.998552 0.661973 -0.000850094
+[objRecController] 
+[objRecController] Recognized 2 objects.
+[objRecController] Model of object 0: 
+[objRecController] Id of object 0: 553
+[objRecController] Relative position of object 0: -0.852983 0.129202 -2.686675
+[objRecController] Relative orientation of object 0: 0.763854 0.044751 -0.643836 2.488802
+[objRecController] Size of object 0: 0.400000 0.400000
+[objRecController] Position of the object 0 on the camera image: 41 157
+[objRecController] Size of the object 0 on the camera image: 81 70
+[objRecController] - Color 1/1: 0.000000 1.000000 0.000000
+[objRecController] Model of object 1: oil barrel
+[objRecController] Id of object 1: 1216
+[objRecController] Relative position of object 1: 0.125190 0.232214 -3.869999
+[objRecController] Relative orientation of object 1: 0.095016 0.703906 -0.703909 2.952130
+[objRecController] Size of object 1: 0.610000 0.610003
+[objRecController] Position of the object 1 on the camera image: 196 150
+[objRecController] Size of the object 1 on the camera image: 77 78
+[objRecController] - Color 1/1: 0.400000 0.100000 0.100000
+[objRecController] 
+[objRecController] Recognized 2 objects.
+[objRecController] Model of object 0: 
+[objRecController] Id of object 0: 553
+[objRecController] Relative position of object 0: 0.852983 0.623325 -5.870807
+[objRecController] Relative orientation of object 0: -0.452217 -0.832112 -0.321074 2.182901
+[objRecController] Size of object 0: 0.400000 0.400000
+[objRecController] Position of the object 0 on the camera image: 243 133
+[objRecController] Size of the object 0 on the camera image: 34 33
+[objRecController] - Color 1/1: 0.000000 1.000000 0.000000
+[objRecController] Model of object 1: oil barrel
+[objRecController] Id of object 1: 1216
+[objRecController] Relative position of object 1: -0.125190 -0.560000 -5.767800
+[objRecController] Relative orientation of object 1: 0.000000 -1.000000 0.000000 0.268344
+[objRecController] Size of object 1: 0.610000 0.880000
+[objRecController] Position of the object 1 on the camera image: 170 224
+[objRecController] Size of the object 1 on the camera image: 49 71
+[objRecController] - Color 1/1: 0.400000 0.100000 0.100000
+[inverse_kinematics] ARM is at position: 0.998552 0.661973 -0.000850095
+[objRecController] 
+[objRecController] Recognized 2 objects.
+[objRecController] Model of object 0: 
+[objRecController] Id of object 0: 553
+[objRecController] Relative position of object 0: -0.852978 0.129207 -2.686675
+[objRecController] Relative orientation of object 0: 0.763852 0.044752 -0.643838 2.488802
+[objRecController] Size of object 0: 0.400000 0.400000
+[objRecController] Position of the object 0 on the camera image: 41 157
+[objRecController] Size of the object 0 on the camera image: 81 70
+[objRecController] - Color 1/1: 0.000000 1.000000 0.000000
+[objRecController] Model of object 1: oil barrel
+[objRecController] Id of object 1: 1216
+[objRecController] Relative position of object 1: 0.125190 0.232214 -3.869999
+[objRecController] Relative orientation of object 1: 0.095016 0.703906 -0.703909 2.952130
+[objRecController] Size of object 1: 0.610000 0.610003
+[objRecController] Position of the object 1 on the camera image: 196 150
+[objRecController] Size of the object 1 on the camera image: 77 78
+[objRecController] - Color 1/1: 0.400000 0.100000 0.100000
+[objRecController] 
+[objRecController] Recognized 2 objects.
+[objRecController] Model of object 0: 
+[objRecController] Id of object 0: 553
+[objRecController] Relative position of object 0: 0.852978 0.623325 -5.870803
+[objRecController] Relative orientation of object 0: -0.452218 -0.832112 -0.321074 2.182897
+[objRecController] Size of object 0: 0.400000 0.400000
+[objRecController] Position of the object 0 on the camera image: 243 133
+[objRecController] Size of the object 0 on the camera image: 34 33
+[objRecController] - Color 1/1: 0.000000 1.000000 0.000000
+[objRecController] Model of object 1: oil barrel
+[objRecController] Id of object 1: 1216
+[objRecController] Relative position of object 1: -0.125190 -0.560000 -5.767800
+[objRecController] Relative orientation of object 1: 0.000000 -1.000000 0.000000 0.268344
+[objRecController] Size of object 1: 0.610000 0.880000
+[objRecController] Position of the object 1 on the camera image: 170 224
+[objRecController] Size of the object 1 on the camera image: 49 71
+[objRecController] - Color 1/1: 0.400000 0.100000 0.100000
+[inverse_kinematics] ARM is at position: 0.998552 0.661973 -0.000850097
+[objRecController] 
+[objRecController] Recognized 2 objects.
+[objRecController] Model of object 0: 
+[objRecController] Id of object 0: 553
+[objRecController] Relative position of object 0: -0.852974 0.129212 -2.686675
+[objRecController] Relative orientation of object 0: 0.763851 0.044753 -0.643839 2.488802
+[objRecController] Size of object 0: 0.400000 0.400000
+[objRecController] Position of the object 0 on the camera image: 41 157
+[objRecController] Size of the object 0 on the camera image: 81 70
+[objRecController] - Color 1/1: 0.000000 1.000000 0.000000
+[objRecController] Model of object 1: oil barrel
+[objRecController] Id of object 1: 1216
+[objRecController] Relative position of object 1: 0.125190 0.232214 -3.869999
+[objRecController] Relative orientation of object 1: 0.095016 0.703906 -0.703909 2.952130
+[objRecController] Size of object 1: 0.610000 0.610003
+[objRecController] Position of the object 1 on the camera image: 196 150
+[objRecController] Size of the object 1 on the camera image: 77 78
+[objRecController] - Color 1/1: 0.400000 0.100000 0.100000
+[objRecController] 
+[objRecController] Recognized 2 objects.
+[objRecController] Model of object 0: 
+[objRecController] Id of object 0: 553
+[objRecController] Relative position of object 0: 0.852974 0.623325 -5.870798
+[objRecController] Relative orientation of object 0: -0.452219 -0.832112 -0.321073 2.182894
+[objRecController] Size of object 0: 0.400000 0.400000
+[objRecController] Position of the object 0 on the camera image: 243 133
+[objRecController] Size of the object 0 on the camera image: 34 33
+[objRecController] - Color 1/1: 0.000000 1.000000 0.000000
+[objRecController] Model of object 1: oil barrel
+[objRecController] Id of object 1: 1216
+[objRecController] Relative position of object 1: -0.125190 -0.560000 -5.767800
+[objRecController] Relative orientation of object 1: 0.000000 -1.000000 0.000000 0.268344
+[objRecController] Size of object 1: 0.610000 0.880000
+[objRecController] Position of the object 1 on the camera image: 170 224
+[objRecController] Size of the object 1 on the camera image: 49 71
+[objRecController] - Color 1/1: 0.400000 0.100000 0.100000
+[inverse_kinematics] ARM is at position: 0.998552 0.661973 -0.000850099
+[objRecController] 
+[objRecController] Recognized 2 objects.
+[objRecController] Model of object 0: 
+[objRecController] Id of object 0: 553
+[objRecController] Relative position of object 0: -0.852970 0.129216 -2.686675
+[objRecController] Relative orientation of object 0: 0.763850 0.044753 -0.643841 2.488803
+[objRecController] Size of object 0: 0.400000 0.400000
+[objRecController] Position of the object 0 on the camera image: 41 157
+[objRecController] Size of the object 0 on the camera image: 81 70
+[objRecController] - Color 1/1: 0.000000 1.000000 0.000000
+[objRecController] Model of object 1: oil barrel
+[objRecController] Id of object 1: 1216
+[objRecController] Relative position of object 1: 0.125190 0.232214 -3.869999
+[objRecController] Relative orientation of object 1: 0.095016 0.703906 -0.703909 2.952130
+[objRecController] Size of object 1: 0.610000 0.610003
+[objRecController] Position of the object 1 on the camera image: 196 150
+[objRecController] Size of the object 1 on the camera image: 77 78
+[objRecController] - Color 1/1: 0.400000 0.100000 0.100000
+[objRecController] 
+[objRecController] Recognized 2 objects.
+[objRecController] Model of object 0: 
+[objRecController] Id of object 0: 553
+[objRecController] Relative position of object 0: 0.852970 0.623325 -5.870794
+[objRecController] Relative orientation of object 0: -0.452220 -0.832111 -0.321073 2.182891
+[objRecController] Size of object 0: 0.400000 0.400000
+[objRecController] Position of the object 0 on the camera image: 243 133
+[objRecController] Size of the object 0 on the camera image: 34 33
+[objRecController] - Color 1/1: 0.000000 1.000000 0.000000
+[objRecController] Model of object 1: oil barrel
+[objRecController] Id of object 1: 1216
+[objRecController] Relative position of object 1: -0.125190 -0.560000 -5.767800
+[objRecController] Relative orientation of object 1: 0.000000 -1.000000 0.000000 0.268344
+[objRecController] Size of object 1: 0.610000 0.880000
+[objRecController] Position of the object 1 on the camera image: 170 224
+[objRecController] Size of the object 1 on the camera image: 49 71
+[objRecController] - Color 1/1: 0.400000 0.100000 0.100000
+[inverse_kinematics] ARM is at position: 0.998552 0.661973 -0.000850101
+[objRecController] 
+[objRecController] Recognized 2 objects.
+[objRecController] Model of object 0: 
+[objRecController] Id of object 0: 553
+[objRecController] Relative position of object 0: -0.852966 0.129220 -2.686675
+[objRecController] Relative orientation of object 0: 0.763849 0.044754 -0.643842 2.488803
+[objRecController] Size of object 0: 0.400000 0.400000
+[objRecController] Position of the object 0 on the camera image: 41 157
+[objRecController] Size of the object 0 on the camera image: 81 70
+[objRecController] - Color 1/1: 0.000000 1.000000 0.000000
+[objRecController] Model of object 1: oil barrel
+[objRecController] Id of object 1: 1216
+[objRecController] Relative position of object 1: 0.125190 0.232214 -3.869999
+[objRecController] Relative orientation of object 1: 0.095016 0.703906 -0.703909 2.952130
+[objRecController] Size of object 1: 0.610000 0.610003
+[objRecController] Position of the object 1 on the camera image: 196 150
+[objRecController] Size of the object 1 on the camera image: 77 78
+[objRecController] - Color 1/1: 0.400000 0.100000 0.100000
+[objRecController] 
+[objRecController] Recognized 2 objects.
+[objRecController] Model of object 0: 
+[objRecController] Id of object 0: 553
+[objRecController] Relative position of object 0: 0.852966 0.623325 -5.870790
+[objRecController] Relative orientation of object 0: -0.452221 -0.832111 -0.321072 2.182888
+[objRecController] Size of object 0: 0.400000 0.400000
+[objRecController] Position of the object 0 on the camera image: 243 133
+[objRecController] Size of the object 0 on the camera image: 34 33
+[objRecController] - Color 1/1: 0.000000 1.000000 0.000000
+[objRecController] Model of object 1: oil barrel
+[objRecController] Id of object 1: 1216
+[objRecController] Relative position of object 1: -0.125190 -0.560000 -5.767800
+[objRecController] Relative orientation of object 1: 0.000000 -1.000000 0.000000 0.268344
+[objRecController] Size of object 1: 0.610000 0.880000
+[objRecController] Position of the object 1 on the camera image: 170 224
+[objRecController] Size of the object 1 on the camera image: 49 71
+[objRecController] - Color 1/1: 0.400000 0.100000 0.100000
+[inverse_kinematics] ARM is at position: 0.998552 0.661973 -0.000850102
+[objRecController] 
+[objRecController] Recognized 2 objects.
+[objRecController] Model of object 0: 
+[objRecController] Id of object 0: 553
+[objRecController] Relative position of object 0: -0.852963 0.129224 -2.686675
+[objRecController] Relative orientation of object 0: 0.763847 0.044754 -0.643843 2.488803
+[objRecController] Size of object 0: 0.400000 0.400000
+[objRecController] Position of the object 0 on the camera image: 41 157
+[objRecController] Size of the object 0 on the camera image: 81 70
+[objRecController] - Color 1/1: 0.000000 1.000000 0.000000
+[objRecController] Model of object 1: oil barrel
+[objRecController] Id of object 1: 1216
+[objRecController] Relative position of object 1: 0.125190 0.232214 -3.869999
+[objRecController] Relative orientation of object 1: 0.095016 0.703906 -0.703909 2.952130
+[objRecController] Size of object 1: 0.610000 0.610003
+[objRecController] Position of the object 1 on the camera image: 196 150
+[objRecController] Size of the object 1 on the camera image: 77 78
+[objRecController] - Color 1/1: 0.400000 0.100000 0.100000
+[objRecController] 
+[objRecController] Recognized 2 objects.
+[objRecController] Model of object 0: 
+[objRecController] Id of object 0: 553
+[objRecController] Relative position of object 0: 0.852963 0.623325 -5.870786
+[objRecController] Relative orientation of object 0: -0.452222 -0.832111 -0.321071 2.182885
+[objRecController] Size of object 0: 0.400000 0.400000
+[objRecController] Position of the object 0 on the camera image: 243 133
+[objRecController] Size of the object 0 on the camera image: 34 33
+[objRecController] - Color 1/1: 0.000000 1.000000 0.000000
+[objRecController] Model of object 1: oil barrel
+[objRecController] Id of object 1: 1216
+[objRecController] Relative position of object 1: -0.125190 -0.560000 -5.767800
+[objRecController] Relative orientation of object 1: 0.000000 -1.000000 0.000000 0.268344
+[objRecController] Size of object 1: 0.610000 0.880000
+[objRecController] Position of the object 1 on the camera image: 170 224
+[objRecController] Size of the object 1 on the camera image: 49 71
+[objRecController] - Color 1/1: 0.400000 0.100000 0.100000
+[inverse_kinematics] ARM is at position: 0.998552 0.661973 -0.000850104
+[objRecController] 
+[objRecController] Recognized 2 objects.
+[objRecController] Model of object 0: 
+[objRecController] Id of object 0: 553
+[objRecController] Relative position of object 0: -0.852959 0.129228 -2.686675
+[objRecController] Relative orientation of object 0: 0.763846 0.044755 -0.643845 2.488803
+[objRecController] Size of object 0: 0.400000 0.400000
+[objRecController] Position of the object 0 on the camera image: 41 157
+[objRecController] Size of the object 0 on the camera image: 81 70
+[objRecController] - Color 1/1: 0.000000 1.000000 0.000000
+[objRecController] Model of object 1: oil barrel
+[objRecController] Id of object 1: 1216
+[objRecController] Relative position of object 1: 0.125190 0.232214 -3.869999
+[objRecController] Relative orientation of object 1: 0.095016 0.703906 -0.703909 2.952130
+[objRecController] Size of object 1: 0.610000 0.610003
+[objRecController] Position of the object 1 on the camera image: 196 150
+[objRecController] Size of the object 1 on the camera image: 77 78
+[objRecController] - Color 1/1: 0.400000 0.100000 0.100000
+[objRecController] 
+[objRecController] Recognized 2 objects.
+[objRecController] Model of object 0: 
+[objRecController] Id of object 0: 553
+[objRecController] Relative position of object 0: 0.852959 0.623325 -5.870782
+[objRecController] Relative orientation of object 0: -0.452223 -0.832110 -0.321071 2.182882
+[objRecController] Size of object 0: 0.400000 0.400000
+[objRecController] Position of the object 0 on the camera image: 243 133
+[objRecController] Size of the object 0 on the camera image: 34 33
+[objRecController] - Color 1/1: 0.000000 1.000000 0.000000
+[objRecController] Model of object 1: oil barrel
+[objRecController] Id of object 1: 1216
+[objRecController] Relative position of object 1: -0.125190 -0.560000 -5.767800
+[objRecController] Relative orientation of object 1: 0.000000 -1.000000 0.000000 0.268344
+[objRecController] Size of object 1: 0.610000 0.880000
+[objRecController] Position of the object 1 on the camera image: 170 224
+[objRecController] Size of the object 1 on the camera image: 49 71
+[objRecController] - Color 1/1: 0.400000 0.100000 0.100000
+[inverse_kinematics] ARM is at position: 0.998552 0.661973 -0.000850105
+[objRecController] 
+[objRecController] Recognized 2 objects.
+[objRecController] Model of object 0: 
+[objRecController] Id of object 0: 553
+[objRecController] Relative position of object 0: -0.852956 0.129232 -2.686675
+[objRecController] Relative orientation of object 0: 0.763845 0.044756 -0.643846 2.488803
+[objRecController] Size of object 0: 0.400000 0.400000
+[objRecController] Position of the object 0 on the camera image: 41 157
+[objRecController] Size of the object 0 on the camera image: 81 70
+[objRecController] - Color 1/1: 0.000000 1.000000 0.000000
+[objRecController] Model of object 1: oil barrel
+[objRecController] Id of object 1: 1216
+[objRecController] Relative position of object 1: 0.125190 0.232214 -3.869999
+[objRecController] Relative orientation of object 1: 0.095016 0.703906 -0.703909 2.952130
+[objRecController] Size of object 1: 0.610000 0.610003
+[objRecController] Position of the object 1 on the camera image: 196 150
+[objRecController] Size of the object 1 on the camera image: 77 78
+[objRecController] - Color 1/1: 0.400000 0.100000 0.100000
+[objRecController] 
+[objRecController] Recognized 2 objects.
+[objRecController] Model of object 0: 
+[objRecController] Id of object 0: 553
+[objRecController] Relative position of object 0: 0.852956 0.623325 -5.870778
+[objRecController] Relative orientation of object 0: -0.452224 -0.832110 -0.321070 2.182879
+[objRecController] Size of object 0: 0.400000 0.400000
+[objRecController] Position of the object 0 on the camera image: 243 133
+[objRecController] Size of the object 0 on the camera image: 34 33
+[objRecController] - Color 1/1: 0.000000 1.000000 0.000000
+[objRecController] Model of object 1: oil barrel
+[objRecController] Id of object 1: 1216
+[objRecController] Relative position of object 1: -0.125190 -0.560000 -5.767800
+[objRecController] Relative orientation of object 1: 0.000000 -1.000000 0.000000 0.268344
+[objRecController] Size of object 1: 0.610000 0.880000
+[objRecController] Position of the object 1 on the camera image: 170 224
+[objRecController] Size of the object 1 on the camera image: 49 71
+[objRecController] - Color 1/1: 0.400000 0.100000 0.100000
+[inverse_kinematics] ARM is at position: 0.998552 0.661973 -0.000850106
+[objRecController] 
+[objRecController] Recognized 2 objects.
+[objRecController] Model of object 0: 
+[objRecController] Id of object 0: 553
+[objRecController] Relative position of object 0: -0.852953 0.129235 -2.686675
+[objRecController] Relative orientation of object 0: 0.763844 0.044756 -0.643847 2.488803
+[objRecController] Size of object 0: 0.400000 0.400000
+[objRecController] Position of the object 0 on the camera image: 41 157
+[objRecController] Size of the object 0 on the camera image: 81 70
+[objRecController] - Color 1/1: 0.000000 1.000000 0.000000
+[objRecController] Model of object 1: oil barrel
+[objRecController] Id of object 1: 1216
+[objRecController] Relative position of object 1: 0.125190 0.232214 -3.869999
+[objRecController] Relative orientation of object 1: 0.095016 0.703906 -0.703909 2.952130
+[objRecController] Size of object 1: 0.610000 0.610003
+[objRecController] Position of the object 1 on the camera image: 196 150
+[objRecController] Size of the object 1 on the camera image: 77 78
+[objRecController] - Color 1/1: 0.400000 0.100000 0.100000
+[objRecController] 
+[objRecController] Recognized 2 objects.
+[objRecController] Model of object 0: 
+[objRecController] Id of object 0: 553
+[objRecController] Relative position of object 0: 0.852953 0.623325 -5.870775
+[objRecController] Relative orientation of object 0: -0.452225 -0.832110 -0.321070 2.182877
+[objRecController] Size of object 0: 0.400000 0.400000
+[objRecController] Position of the object 0 on the camera image: 243 133
+[objRecController] Size of the object 0 on the camera image: 34 33
+[objRecController] - Color 1/1: 0.000000 1.000000 0.000000
+[objRecController] Model of object 1: oil barrel
+[objRecController] Id of object 1: 1216
+[objRecController] Relative position of object 1: -0.125190 -0.560000 -5.767800
+[objRecController] Relative orientation of object 1: 0.000000 -1.000000 0.000000 0.268344
+[objRecController] Size of object 1: 0.610000 0.880000
+[objRecController] Position of the object 1 on the camera image: 170 224
+[objRecController] Size of the object 1 on the camera image: 49 71
+[objRecController] - Color 1/1: 0.400000 0.100000 0.100000
+[inverse_kinematics] ARM is at position: 0.998552 0.661973 -0.000850108
+[objRecController] 
+[objRecController] Recognized 2 objects.
+[objRecController] Model of object 0: 
+[objRecController] Id of object 0: 553
+[objRecController] Relative position of object 0: -0.852950 0.129239 -2.686675
+[objRecController] Relative orientation of object 0: 0.763843 0.044757 -0.643848 2.488804
+[objRecController] Size of object 0: 0.400000 0.400000
+[objRecController] Position of the object 0 on the camera image: 41 157
+[objRecController] Size of the object 0 on the camera image: 81 70
+[objRecController] - Color 1/1: 0.000000 1.000000 0.000000
+[objRecController] Model of object 1: oil barrel
+[objRecController] Id of object 1: 1216
+[objRecController] Relative position of object 1: 0.125190 0.232214 -3.869999
+[objRecController] Relative orientation of object 1: 0.095016 0.703906 -0.703909 2.952130
+[objRecController] Size of object 1: 0.610000 0.610003
+[objRecController] Position of the object 1 on the camera image: 196 150
+[objRecController] Size of the object 1 on the camera image: 77 78
+[objRecController] - Color 1/1: 0.400000 0.100000 0.100000
+[objRecController] 
+[objRecController] Recognized 2 objects.
+[objRecController] Model of object 0: 
+[objRecController] Id of object 0: 553
+[objRecController] Relative position of object 0: 0.852950 0.623325 -5.870771
+[objRecController] Relative orientation of object 0: -0.452226 -0.832110 -0.321069 2.182874
+[objRecController] Size of object 0: 0.400000 0.400000
+[objRecController] Position of the object 0 on the camera image: 243 133
+[objRecController] Size of the object 0 on the camera image: 34 33
+[objRecController] - Color 1/1: 0.000000 1.000000 0.000000
+[objRecController] Model of object 1: oil barrel
+[objRecController] Id of object 1: 1216
+[objRecController] Relative position of object 1: -0.125190 -0.560000 -5.767800
+[objRecController] Relative orientation of object 1: 0.000000 -1.000000 0.000000 0.268344
+[objRecController] Size of object 1: 0.610000 0.880000
+[objRecController] Position of the object 1 on the camera image: 170 224
+[objRecController] Size of the object 1 on the camera image: 49 71
+[objRecController] - Color 1/1: 0.400000 0.100000 0.100000
+[inverse_kinematics] ARM is at position: 0.998552 0.661973 -0.000850109
+[objRecController] 
+[objRecController] Recognized 2 objects.
+[objRecController] Model of object 0: 
+[objRecController] Id of object 0: 553
+[objRecController] Relative position of object 0: -0.852947 0.129242 -2.686675
+[objRecController] Relative orientation of object 0: 0.763842 0.044757 -0.643849 2.488804
+[objRecController] Size of object 0: 0.400000 0.400000
+[objRecController] Position of the object 0 on the camera image: 41 157
+[objRecController] Size of the object 0 on the camera image: 81 70
+[objRecController] - Color 1/1: 0.000000 1.000000 0.000000
+[objRecController] Model of object 1: oil barrel
+[objRecController] Id of object 1: 1216
+[objRecController] Relative position of object 1: 0.125190 0.232214 -3.869999
+[objRecController] Relative orientation of object 1: 0.095016 0.703906 -0.703909 2.952130
+[objRecController] Size of object 1: 0.610000 0.610003
+[objRecController] Position of the object 1 on the camera image: 196 150
+[objRecController] Size of the object 1 on the camera image: 77 78
+[objRecController] - Color 1/1: 0.400000 0.100000 0.100000
+[objRecController] 
+[objRecController] Recognized 2 objects.
+[objRecController] Model of object 0: 
+[objRecController] Id of object 0: 553
+[objRecController] Relative position of object 0: 0.852947 0.623325 -5.870768
+[objRecController] Relative orientation of object 0: -0.452226 -0.832109 -0.321069 2.182872
+[objRecController] Size of object 0: 0.400000 0.400000
+[objRecController] Position of the object 0 on the camera image: 243 133
+[objRecController] Size of the object 0 on the camera image: 34 33
+[objRecController] - Color 1/1: 0.000000 1.000000 0.000000
+[objRecController] Model of object 1: oil barrel
+[objRecController] Id of object 1: 1216
+[objRecController] Relative position of object 1: -0.125190 -0.560000 -5.767800
+[objRecController] Relative orientation of object 1: 0.000000 -1.000000 0.000000 0.268344
+[objRecController] Size of object 1: 0.610000 0.880000
+[objRecController] Position of the object 1 on the camera image: 170 224
+[objRecController] Size of the object 1 on the camera image: 49 71
+[objRecController] - Color 1/1: 0.400000 0.100000 0.100000
+[inverse_kinematics] ARM is at position: 0.998552 0.661973 -0.00085011
+[objRecController] 
+[objRecController] Recognized 2 objects.
+[objRecController] Model of object 0: 
+[objRecController] Id of object 0: 553
+[objRecController] Relative position of object 0: -0.852944 0.129245 -2.686675
+[objRecController] Relative orientation of object 0: 0.763841 0.044758 -0.643850 2.488804
+[objRecController] Size of object 0: 0.400000 0.400000
+[objRecController] Position of the object 0 on the camera image: 41 157
+[objRecController] Size of the object 0 on the camera image: 81 70
+[objRecController] - Color 1/1: 0.000000 1.000000 0.000000
+[objRecController] Model of object 1: oil barrel
+[objRecController] Id of object 1: 1216
+[objRecController] Relative position of object 1: 0.125190 0.232214 -3.869999
+[objRecController] Relative orientation of object 1: 0.095016 0.703906 -0.703909 2.952130
+[objRecController] Size of object 1: 0.610000 0.610003
+[objRecController] Position of the object 1 on the camera image: 196 150
+[objRecController] Size of the object 1 on the camera image: 77 78
+[objRecController] - Color 1/1: 0.400000 0.100000 0.100000
+[objRecController] 
+[objRecController] Recognized 2 objects.
+[objRecController] Model of object 0: 
+[objRecController] Id of object 0: 553
+[objRecController] Relative position of object 0: 0.852944 0.623325 -5.870765
+[objRecController] Relative orientation of object 0: -0.452227 -0.832109 -0.321069 2.182869
+[objRecController] Size of object 0: 0.400000 0.400000
+[objRecController] Position of the object 0 on the camera image: 243 133
+[objRecController] Size of the object 0 on the camera image: 34 33
+[objRecController] - Color 1/1: 0.000000 1.000000 0.000000
+[objRecController] Model of object 1: oil barrel
+[objRecController] Id of object 1: 1216
+[objRecController] Relative position of object 1: -0.125190 -0.560000 -5.767800
+[objRecController] Relative orientation of object 1: 0.000000 -1.000000 0.000000 0.268344
+[objRecController] Size of object 1: 0.610000 0.880000
+[objRecController] Position of the object 1 on the camera image: 170 224
+[objRecController] Size of the object 1 on the camera image: 49 71
+[objRecController] - Color 1/1: 0.400000 0.100000 0.100000
+[inverse_kinematics] ARM is at position: 0.998554 0.661972 -0.000852557
+[objRecController] 
+[objRecController] Recognized 2 objects.
+[objRecController] Model of object 0: 
+[objRecController] Id of object 0: 553
+[objRecController] Relative position of object 0: -0.853790 0.128312 -2.686677
+[objRecController] Relative orientation of object 0: 0.764130 0.044567 -0.643521 2.488753
+[objRecController] Size of object 0: 0.400000 0.400000
+[objRecController] Position of the object 0 on the camera image: 41 157
+[objRecController] Size of the object 0 on the camera image: 81 70
+[objRecController] - Color 1/1: 0.000000 1.000000 0.000000
+[objRecController] Model of object 1: oil barrel
+[objRecController] Id of object 1: 1216
+[objRecController] Relative position of object 1: 0.125190 0.232214 -3.869999
+[objRecController] Relative orientation of object 1: 0.095016 0.703906 -0.703909 2.952130
+[objRecController] Size of object 1: 0.610000 0.610003
+[objRecController] Position of the object 1 on the camera image: 196 150
+[objRecController] Size of the object 1 on the camera image: 77 78
+[objRecController] - Color 1/1: 0.400000 0.100000 0.100000
+[objRecController] 
+[objRecController] Recognized 2 objects.
+[objRecController] Model of object 0: 
+[objRecController] Id of object 0: 553
+[objRecController] Relative position of object 0: 0.853790 0.623323 -5.871698
+[objRecController] Relative orientation of object 0: -0.452025 -0.832170 -0.321196 2.183663
+[objRecController] Size of object 0: 0.400000 0.400000
+[objRecController] Position of the object 0 on the camera image: 243 133
+[objRecController] Size of the object 0 on the camera image: 34 33
+[objRecController] - Color 1/1: 0.000000 1.000000 0.000000
+[objRecController] Model of object 1: oil barrel
+[objRecController] Id of object 1: 1216
+[objRecController] Relative position of object 1: -0.125190 -0.560000 -5.767800
+[objRecController] Relative orientation of object 1: 0.000000 -1.000000 0.000000 0.268344
+[objRecController] Size of object 1: 0.610000 0.880000
+[objRecController] Position of the object 1 on the camera image: 170 224
+[objRecController] Size of the object 1 on the camera image: 49 71
+[objRecController] - Color 1/1: 0.400000 0.100000 0.100000
+[inverse_kinematics] ARM is at position: 0.998553 0.661973 -0.00085173
+[objRecController] 
+[objRecController] Recognized 2 objects.
+[objRecController] Model of object 0: 
+[objRecController] Id of object 0: 553
+[objRecController] Relative position of object 0: -0.853745 0.128361 -2.686680
+[objRecController] Relative orientation of object 0: 0.764119 0.044563 -0.643534 2.488754
+[objRecController] Size of object 0: 0.400000 0.400000
+[objRecController] Position of the object 0 on the camera image: 41 157
+[objRecController] Size of the object 0 on the camera image: 81 70
+[objRecController] - Color 1/1: 0.000000 1.000000 0.000000
+[objRecController] Model of object 1: oil barrel
+[objRecController] Id of object 1: 1216
+[objRecController] Relative position of object 1: 0.125190 0.232214 -3.869999
+[objRecController] Relative orientation of object 1: 0.095016 0.703906 -0.703909 2.952130
+[objRecController] Size of object 1: 0.610000 0.610003
+[objRecController] Position of the object 1 on the camera image: 196 150
+[objRecController] Size of the object 1 on the camera image: 77 78
+[objRecController] - Color 1/1: 0.400000 0.100000 0.100000
+[objRecController] 
+[objRecController] Recognized 2 objects.
+[objRecController] Model of object 0: 
+[objRecController] Id of object 0: 553
+[objRecController] Relative position of object 0: 0.853745 0.623319 -5.871649
+[objRecController] Relative orientation of object 0: -0.452040 -0.832164 -0.321190 2.183648
+[objRecController] Size of object 0: 0.400000 0.400000
+[objRecController] Position of the object 0 on the camera image: 243 133
+[objRecController] Size of the object 0 on the camera image: 34 33
+[objRecController] - Color 1/1: 0.000000 1.000000 0.000000
+[objRecController] Model of object 1: oil barrel
+[objRecController] Id of object 1: 1216
+[objRecController] Relative position of object 1: -0.125190 -0.560000 -5.767800
+[objRecController] Relative orientation of object 1: 0.000000 -1.000000 0.000000 0.268344
+[objRecController] Size of object 1: 0.610000 0.880000
+[objRecController] Position of the object 1 on the camera image: 170 224
+[objRecController] Size of the object 1 on the camera image: 49 71
+[objRecController] - Color 1/1: 0.400000 0.100000 0.100000
+[inverse_kinematics] ARM is at position: 0.998553 0.661973 -0.000851634
+[objRecController] 
+[objRecController] Recognized 2 objects.
+[objRecController] Model of object 0: 
+[objRecController] Id of object 0: 553
+[objRecController] Relative position of object 0: -0.853738 0.128368 -2.686680
+[objRecController] Relative orientation of object 0: 0.764117 0.044564 -0.643536 2.488755
+[objRecController] Size of object 0: 0.400000 0.400000
+[objRecController] Position of the object 0 on the camera image: 41 157
+[objRecController] Size of the object 0 on the camera image: 81 70
+[objRecController] - Color 1/1: 0.000000 1.000000 0.000000
+[objRecController] Model of object 1: oil barrel
+[objRecController] Id of object 1: 1216
+[objRecController] Relative position of object 1: 0.125190 0.232214 -3.869999
+[objRecController] Relative orientation of object 1: 0.095016 0.703906 -0.703909 2.952130
+[objRecController] Size of object 1: 0.610000 0.610003
+[objRecController] Position of the object 1 on the camera image: 196 150
+[objRecController] Size of the object 1 on the camera image: 77 78
+[objRecController] - Color 1/1: 0.400000 0.100000 0.100000
+[objRecController] 
+[objRecController] Recognized 2 objects.
+[objRecController] Model of object 0: 
+[objRecController] Id of object 0: 553
+[objRecController] Relative position of object 0: 0.853738 0.623319 -5.871642
+[objRecController] Relative orientation of object 0: -0.452041 -0.832164 -0.321189 2.183644
+[objRecController] Size of object 0: 0.400000 0.400000
+[objRecController] Position of the object 0 on the camera image: 243 133
+[objRecController] Size of the object 0 on the camera image: 34 33
+[objRecController] - Color 1/1: 0.000000 1.000000 0.000000
+[objRecController] Model of object 1: oil barrel
+[objRecController] Id of object 1: 1216
+[objRecController] Relative position of object 1: -0.125190 -0.560000 -5.767800
+[objRecController] Relative orientation of object 1: 0.000000 -1.000000 0.000000 0.268344
+[objRecController] Size of object 1: 0.610000 0.880000
+[objRecController] Position of the object 1 on the camera image: 170 224
+[objRecController] Size of the object 1 on the camera image: 49 71
+[objRecController] - Color 1/1: 0.400000 0.100000 0.100000
+[inverse_kinematics] ARM is at position: 0.998553 0.661973 -0.000851608
+[objRecController] 
+[objRecController] Recognized 2 objects.
+[objRecController] Model of object 0: 
+[objRecController] Id of object 0: 553
+[objRecController] Relative position of object 0: -0.853733 0.128374 -2.686680
+[objRecController] Relative orientation of object 0: 0.764115 0.044565 -0.643538 2.488755
+[objRecController] Size of object 0: 0.400000 0.400000
+[objRecController] Position of the object 0 on the camera image: 41 157
+[objRecController] Size of the object 0 on the camera image: 81 70
+[objRecController] - Color 1/1: 0.000000 1.000000 0.000000
+[objRecController] Model of object 1: oil barrel
+[objRecController] Id of object 1: 1216
+[objRecController] Relative position of object 1: 0.125190 0.232214 -3.869999
+[objRecController] Relative orientation of object 1: 0.095016 0.703906 -0.703909 2.952130
+[objRecController] Size of object 1: 0.610000 0.610003
+[objRecController] Position of the object 1 on the camera image: 196 150
+[objRecController] Size of the object 1 on the camera image: 77 78
+[objRecController] - Color 1/1: 0.400000 0.100000 0.100000
+[objRecController] 
+[objRecController] Recognized 2 objects.
+[objRecController] Model of object 0: 
+[objRecController] Id of object 0: 553
+[objRecController] Relative position of object 0: 0.853733 0.623319 -5.871636
+[objRecController] Relative orientation of object 0: -0.452043 -0.832163 -0.321188 2.183639
+[objRecController] Size of object 0: 0.400000 0.400000
+[objRecController] Position of the object 0 on the camera image: 243 133
+[objRecController] Size of the object 0 on the camera image: 34 33
+[objRecController] - Color 1/1: 0.000000 1.000000 0.000000
+[objRecController] Model of object 1: oil barrel
+[objRecController] Id of object 1: 1216
+[objRecController] Relative position of object 1: -0.125190 -0.560000 -5.767800
+[objRecController] Relative orientation of object 1: 0.000000 -1.000000 0.000000 0.268344
+[objRecController] Size of object 1: 0.610000 0.880000
+[objRecController] Position of the object 1 on the camera image: 170 224
+[objRecController] Size of the object 1 on the camera image: 49 71
+[objRecController] - Color 1/1: 0.400000 0.100000 0.100000
+[inverse_kinematics] ARM is at position: 0.998553 0.661973 -0.000851598
+[objRecController] 
+[objRecController] Recognized 2 objects.
+[objRecController] Model of object 0: 
+[objRecController] Id of object 0: 553
+[objRecController] Relative position of object 0: -0.853728 0.128379 -2.686680
+[objRecController] Relative orientation of object 0: 0.764114 0.044566 -0.643540 2.488755
+[objRecController] Size of object 0: 0.400000 0.400000
+[objRecController] Position of the object 0 on the camera image: 41 157
+[objRecController] Size of the object 0 on the camera image: 81 70
+[objRecController] - Color 1/1: 0.000000 1.000000 0.000000
+[objRecController] Model of object 1: oil barrel
+[objRecController] Id of object 1: 1216
+[objRecController] Relative position of object 1: 0.125190 0.232214 -3.869999
+[objRecController] Relative orientation of object 1: 0.095016 0.703906 -0.703909 2.952130
+[objRecController] Size of object 1: 0.610000 0.610003
+[objRecController] Position of the object 1 on the camera image: 196 150
+[objRecController] Size of the object 1 on the camera image: 77 78
+[objRecController] - Color 1/1: 0.400000 0.100000 0.100000
+[objRecController] 
+[objRecController] Recognized 2 objects.
+[objRecController] Model of object 0: 
+[objRecController] Id of object 0: 553
+[objRecController] Relative position of object 0: 0.853728 0.623319 -5.871631
+[objRecController] Relative orientation of object 0: -0.452044 -0.832163 -0.321187 2.183635
+[objRecController] Size of object 0: 0.400000 0.400000
+[objRecController] Position of the object 0 on the camera image: 243 133
+[objRecController] Size of the object 0 on the camera image: 34 33
+[objRecController] - Color 1/1: 0.000000 1.000000 0.000000
+[objRecController] Model of object 1: oil barrel
+[objRecController] Id of object 1: 1216
+[objRecController] Relative position of object 1: -0.125190 -0.560000 -5.767800
+[objRecController] Relative orientation of object 1: 0.000000 -1.000000 0.000000 0.268344
+[objRecController] Size of object 1: 0.610000 0.880000
+[objRecController] Position of the object 1 on the camera image: 170 224
+[objRecController] Size of the object 1 on the camera image: 49 71
+[objRecController] - Color 1/1: 0.400000 0.100000 0.100000
+[inverse_kinematics] ARM is at position: 0.998553 0.661973 -0.000851595
+[objRecController] 
+[objRecController] Recognized 2 objects.
+[objRecController] Model of object 0: 
+[objRecController] Id of object 0: 553
+[objRecController] Relative position of object 0: -0.853723 0.128384 -2.686681
+[objRecController] Relative orientation of object 0: 0.764112 0.044567 -0.643542 2.488755
+[objRecController] Size of object 0: 0.400000 0.400000
+[objRecController] Position of the object 0 on the camera image: 41 157
+[objRecController] Size of the object 0 on the camera image: 81 70
+[objRecController] - Color 1/1: 0.000000 1.000000 0.000000
+[objRecController] Model of object 1: oil barrel
+[objRecController] Id of object 1: 1216
+[objRecController] Relative position of object 1: 0.125190 0.232214 -3.869999
+[objRecController] Relative orientation of object 1: 0.095016 0.703906 -0.703909 2.952130
+[objRecController] Size of object 1: 0.610000 0.610003
+[objRecController] Position of the object 1 on the camera image: 196 150
+[objRecController] Size of the object 1 on the camera image: 77 78
+[objRecController] - Color 1/1: 0.400000 0.100000 0.100000
+[objRecController] 
+[objRecController] Recognized 2 objects.
+[objRecController] Model of object 0: 
+[objRecController] Id of object 0: 553
+[objRecController] Relative position of object 0: 0.853723 0.623319 -5.871625
+[objRecController] Relative orientation of object 0: -0.452045 -0.832163 -0.321186 2.183632
+[objRecController] Size of object 0: 0.400000 0.400000
+[objRecController] Position of the object 0 on the camera image: 243 133
+[objRecController] Size of the object 0 on the camera image: 34 33
+[objRecController] - Color 1/1: 0.000000 1.000000 0.000000
+[objRecController] Model of object 1: oil barrel
+[objRecController] Id of object 1: 1216
+[objRecController] Relative position of object 1: -0.125190 -0.560000 -5.767800
+[objRecController] Relative orientation of object 1: 0.000000 -1.000000 0.000000 0.268344
+[objRecController] Size of object 1: 0.610000 0.880000
+[objRecController] Position of the object 1 on the camera image: 170 224
+[objRecController] Size of the object 1 on the camera image: 49 71
+[objRecController] - Color 1/1: 0.400000 0.100000 0.100000
+[inverse_kinematics] ARM is at position: 0.998553 0.661973 -0.000851595
+[objRecController] 
+[objRecController] Recognized 2 objects.
+[objRecController] Model of object 0: 
+[objRecController] Id of object 0: 553
+[objRecController] Relative position of object 0: -0.853719 0.128389 -2.686681
+[objRecController] Relative orientation of object 0: 0.764111 0.044567 -0.643544 2.488755
+[objRecController] Size of object 0: 0.400000 0.400000
+[objRecController] Position of the object 0 on the camera image: 41 157
+[objRecController] Size of the object 0 on the camera image: 81 70
+[objRecController] - Color 1/1: 0.000000 1.000000 0.000000
+[objRecController] Model of object 1: oil barrel
+[objRecController] Id of object 1: 1216
+[objRecController] Relative position of object 1: 0.125190 0.232214 -3.869999
+[objRecController] Relative orientation of object 1: 0.095016 0.703906 -0.703909 2.952130
+[objRecController] Size of object 1: 0.610000 0.610003
+[objRecController] Position of the object 1 on the camera image: 196 150
+[objRecController] Size of the object 1 on the camera image: 77 78
+[objRecController] - Color 1/1: 0.400000 0.100000 0.100000
+[objRecController] 
+[objRecController] Recognized 2 objects.
+[objRecController] Model of object 0: 
+[objRecController] Id of object 0: 553
+[objRecController] Relative position of object 0: 0.853719 0.623319 -5.871621
+[objRecController] Relative orientation of object 0: -0.452046 -0.832162 -0.321186 2.183628
+[objRecController] Size of object 0: 0.400000 0.400000
+[objRecController] Position of the object 0 on the camera image: 243 133
+[objRecController] Size of the object 0 on the camera image: 34 33
+[objRecController] - Color 1/1: 0.000000 1.000000 0.000000
+[objRecController] Model of object 1: oil barrel
+[objRecController] Id of object 1: 1216
+[objRecController] Relative position of object 1: -0.125190 -0.560000 -5.767800
+[objRecController] Relative orientation of object 1: 0.000000 -1.000000 0.000000 0.268344
+[objRecController] Size of object 1: 0.610000 0.880000
+[objRecController] Position of the object 1 on the camera image: 170 224
+[objRecController] Size of the object 1 on the camera image: 49 71
+[objRecController] - Color 1/1: 0.400000 0.100000 0.100000
+[inverse_kinematics] ARM is at position: 0.998553 0.661973 -0.000851596
+[objRecController] 
+[objRecController] Recognized 2 objects.
+[objRecController] Model of object 0: 
+[objRecController] Id of object 0: 553
+[objRecController] Relative position of object 0: -0.853715 0.128394 -2.686681
+[objRecController] Relative orientation of object 0: 0.764110 0.044568 -0.643545 2.488756
+[objRecController] Size of object 0: 0.400000 0.400000
+[objRecController] Position of the object 0 on the camera image: 41 157
+[objRecController] Size of the object 0 on the camera image: 81 70
+[objRecController] - Color 1/1: 0.000000 1.000000 0.000000
+[objRecController] Model of object 1: oil barrel
+[objRecController] Id of object 1: 1216
+[objRecController] Relative position of object 1: 0.125190 0.232214 -3.869999
+[objRecController] Relative orientation of object 1: 0.095016 0.703906 -0.703909 2.952130
+[objRecController] Size of object 1: 0.610000 0.610003
+[objRecController] Position of the object 1 on the camera image: 196 150
+[objRecController] Size of the object 1 on the camera image: 77 78
+[objRecController] - Color 1/1: 0.400000 0.100000 0.100000
+[objRecController] 
+[objRecController] Recognized 2 objects.
+[objRecController] Model of object 0: 
+[objRecController] Id of object 0: 553
+[objRecController] Relative position of object 0: 0.853715 0.623319 -5.871616
+[objRecController] Relative orientation of object 0: -0.452047 -0.832162 -0.321185 2.183625
+[objRecController] Size of object 0: 0.400000 0.400000
+[objRecController] Position of the object 0 on the camera image: 243 133
+[objRecController] Size of the object 0 on the camera image: 34 33
+[objRecController] - Color 1/1: 0.000000 1.000000 0.000000
+[objRecController] Model of object 1: oil barrel
+[objRecController] Id of object 1: 1216
+[objRecController] Relative position of object 1: -0.125190 -0.560000 -5.767800
+[objRecController] Relative orientation of object 1: 0.000000 -1.000000 0.000000 0.268344
+[objRecController] Size of object 1: 0.610000 0.880000
+[objRecController] Position of the object 1 on the camera image: 170 224
+[objRecController] Size of the object 1 on the camera image: 49 71
+[objRecController] - Color 1/1: 0.400000 0.100000 0.100000
+[inverse_kinematics] ARM is at position: 0.998553 0.661973 -0.000851597
+[objRecController] 
+[objRecController] Recognized 2 objects.
+[objRecController] Model of object 0: 
+[objRecController] Id of object 0: 553
+[objRecController] Relative position of object 0: -0.853711 0.128398 -2.686681
+[objRecController] Relative orientation of object 0: 0.764108 0.044569 -0.643546 2.488756
+[objRecController] Size of object 0: 0.400000 0.400000
+[objRecController] Position of the object 0 on the camera image: 41 157
+[objRecController] Size of the object 0 on the camera image: 81 70
+[objRecController] - Color 1/1: 0.000000 1.000000 0.000000
+[objRecController] Model of object 1: oil barrel
+[objRecController] Id of object 1: 1216
+[objRecController] Relative position of object 1: 0.125190 0.232214 -3.869999
+[objRecController] Relative orientation of object 1: 0.095016 0.703906 -0.703909 2.952130
+[objRecController] Size of object 1: 0.610000 0.610003
+[objRecController] Position of the object 1 on the camera image: 196 150
+[objRecController] Size of the object 1 on the camera image: 77 78
+[objRecController] - Color 1/1: 0.400000 0.100000 0.100000
+[objRecController] 
+[objRecController] Recognized 2 objects.
+[objRecController] Model of object 0: 
+[objRecController] Id of object 0: 553
+[objRecController] Relative position of object 0: 0.853711 0.623319 -5.871612
+[objRecController] Relative orientation of object 0: -0.452048 -0.832162 -0.321185 2.183621
+[objRecController] Size of object 0: 0.400000 0.400000
+[objRecController] Position of the object 0 on the camera image: 243 133
+[objRecController] Size of the object 0 on the camera image: 34 33
+[objRecController] - Color 1/1: 0.000000 1.000000 0.000000
+[objRecController] Model of object 1: oil barrel
+[objRecController] Id of object 1: 1216
+[objRecController] Relative position of object 1: -0.125190 -0.560000 -5.767800
+[objRecController] Relative orientation of object 1: 0.000000 -1.000000 0.000000 0.268344
+[objRecController] Size of object 1: 0.610000 0.880000
+[objRecController] Position of the object 1 on the camera image: 170 224
+[objRecController] Size of the object 1 on the camera image: 49 71
+[objRecController] - Color 1/1: 0.400000 0.100000 0.100000
+[inverse_kinematics] ARM is at position: 0.998553 0.661973 -0.000851599
+[objRecController] 
+[objRecController] Recognized 2 objects.
+[objRecController] Model of object 0: 
+[objRecController] Id of object 0: 553
+[objRecController] Relative position of object 0: -0.853707 0.128402 -2.686681
+[objRecController] Relative orientation of object 0: 0.764107 0.044569 -0.643548 2.488756
+[objRecController] Size of object 0: 0.400000 0.400000
+[objRecController] Position of the object 0 on the camera image: 41 157
+[objRecController] Size of the object 0 on the camera image: 81 70
+[objRecController] - Color 1/1: 0.000000 1.000000 0.000000
+[objRecController] Model of object 1: oil barrel
+[objRecController] Id of object 1: 1216
+[objRecController] Relative position of object 1: 0.125190 0.232214 -3.869999
+[objRecController] Relative orientation of object 1: 0.095016 0.703906 -0.703909 2.952130
+[objRecController] Size of object 1: 0.610000 0.610003
+[objRecController] Position of the object 1 on the camera image: 196 150
+[objRecController] Size of the object 1 on the camera image: 77 78
+[objRecController] - Color 1/1: 0.400000 0.100000 0.100000
+[objRecController] 
+[objRecController] Recognized 2 objects.
+[objRecController] Model of object 0: 
+[objRecController] Id of object 0: 553
+[objRecController] Relative position of object 0: 0.853707 0.623319 -5.871608
+[objRecController] Relative orientation of object 0: -0.452049 -0.832161 -0.321184 2.183618
+[objRecController] Size of object 0: 0.400000 0.400000
+[objRecController] Position of the object 0 on the camera image: 243 133
+[objRecController] Size of the object 0 on the camera image: 34 33
+[objRecController] - Color 1/1: 0.000000 1.000000 0.000000
+[objRecController] Model of object 1: oil barrel
+[objRecController] Id of object 1: 1216
+[objRecController] Relative position of object 1: -0.125190 -0.560000 -5.767800
+[objRecController] Relative orientation of object 1: 0.000000 -1.000000 0.000000 0.268344
+[objRecController] Size of object 1: 0.610000 0.880000
+[objRecController] Position of the object 1 on the camera image: 170 224
+[objRecController] Size of the object 1 on the camera image: 49 71
+[objRecController] - Color 1/1: 0.400000 0.100000 0.100000
+[inverse_kinematics] ARM is at position: 0.998553 0.661973 -0.0008516
+[objRecController] 
+[objRecController] Recognized 2 objects.
+[objRecController] Model of object 0: 
+[objRecController] Id of object 0: 553
+[objRecController] Relative position of object 0: -0.853704 0.128406 -2.686681
+[objRecController] Relative orientation of object 0: 0.764106 0.044570 -0.643549 2.488756
+[objRecController] Size of object 0: 0.400000 0.400000
+[objRecController] Position of the object 0 on the camera image: 41 157
+[objRecController] Size of the object 0 on the camera image: 81 70
+[objRecController] - Color 1/1: 0.000000 1.000000 0.000000
+[objRecController] Model of object 1: oil barrel
+[objRecController] Id of object 1: 1216
+[objRecController] Relative position of object 1: 0.125190 0.232214 -3.869999
+[objRecController] Relative orientation of object 1: 0.095016 0.703906 -0.703909 2.952130
+[objRecController] Size of object 1: 0.610000 0.610003
+[objRecController] Position of the object 1 on the camera image: 196 150
+[objRecController] Size of the object 1 on the camera image: 77 78
+[objRecController] - Color 1/1: 0.400000 0.100000 0.100000
+[objRecController] 
+[objRecController] Recognized 2 objects.
+[objRecController] Model of object 0: 
+[objRecController] Id of object 0: 553
+[objRecController] Relative position of object 0: 0.853704 0.623319 -5.871604
+[objRecController] Relative orientation of object 0: -0.452050 -0.832161 -0.321183 2.183616
+[objRecController] Size of object 0: 0.400000 0.400000
+[objRecController] Position of the object 0 on the camera image: 243 133
+[objRecController] Size of the object 0 on the camera image: 34 33
+[objRecController] - Color 1/1: 0.000000 1.000000 0.000000
+[objRecController] Model of object 1: oil barrel
+[objRecController] Id of object 1: 1216
+[objRecController] Relative position of object 1: -0.125190 -0.560000 -5.767800
+[objRecController] Relative orientation of object 1: 0.000000 -1.000000 0.000000 0.268344
+[objRecController] Size of object 1: 0.610000 0.880000
+[objRecController] Position of the object 1 on the camera image: 170 224
+[objRecController] Size of the object 1 on the camera image: 49 71
+[objRecController] - Color 1/1: 0.400000 0.100000 0.100000
+[inverse_kinematics] ARM is at position: 0.998553 0.661973 -0.000851602
+[objRecController] 
+[objRecController] Recognized 2 objects.
+[objRecController] Model of object 0: 
+[objRecController] Id of object 0: 553
+[objRecController] Relative position of object 0: -0.853700 0.128410 -2.686681
+[objRecController] Relative orientation of object 0: 0.764105 0.044570 -0.643550 2.488756
+[objRecController] Size of object 0: 0.400000 0.400000
+[objRecController] Position of the object 0 on the camera image: 41 157
+[objRecController] Size of the object 0 on the camera image: 81 70
+[objRecController] - Color 1/1: 0.000000 1.000000 0.000000
+[objRecController] Model of object 1: oil barrel
+[objRecController] Id of object 1: 1216
+[objRecController] Relative position of object 1: 0.125190 0.232214 -3.869999
+[objRecController] Relative orientation of object 1: 0.095016 0.703906 -0.703909 2.952130
+[objRecController] Size of object 1: 0.610000 0.610003
+[objRecController] Position of the object 1 on the camera image: 196 150
+[objRecController] Size of the object 1 on the camera image: 77 78
+[objRecController] - Color 1/1: 0.400000 0.100000 0.100000
+[objRecController] 
+[objRecController] Recognized 2 objects.
+[objRecController] Model of object 0: 
+[objRecController] Id of object 0: 553
+[objRecController] Relative position of object 0: 0.853700 0.623319 -5.871600
+[objRecController] Relative orientation of object 0: -0.452051 -0.832161 -0.321183 2.183613
+[objRecController] Size of object 0: 0.400000 0.400000
+[objRecController] Position of the object 0 on the camera image: 243 133
+[objRecController] Size of the object 0 on the camera image: 34 33
+[objRecController] - Color 1/1: 0.000000 1.000000 0.000000
+[objRecController] Model of object 1: oil barrel
+[objRecController] Id of object 1: 1216
+[objRecController] Relative position of object 1: -0.125190 -0.560000 -5.767800
+[objRecController] Relative orientation of object 1: 0.000000 -1.000000 0.000000 0.268344
+[objRecController] Size of object 1: 0.610000 0.880000
+[objRecController] Position of the object 1 on the camera image: 170 224
+[objRecController] Size of the object 1 on the camera image: 49 71
+[objRecController] - Color 1/1: 0.400000 0.100000 0.100000
+[inverse_kinematics] ARM is at position: 0.998553 0.661973 -0.000851604
+[objRecController] 
+[objRecController] Recognized 2 objects.
+[objRecController] Model of object 0: 
+[objRecController] Id of object 0: 553
+[objRecController] Relative position of object 0: -0.853697 0.128413 -2.686681
+[objRecController] Relative orientation of object 0: 0.764104 0.044571 -0.643552 2.488756
+[objRecController] Size of object 0: 0.400000 0.400000
+[objRecController] Position of the object 0 on the camera image: 41 157
+[objRecController] Size of the object 0 on the camera image: 81 70
+[objRecController] - Color 1/1: 0.000000 1.000000 0.000000
+[objRecController] Model of object 1: oil barrel
+[objRecController] Id of object 1: 1216
+[objRecController] Relative position of object 1: 0.125190 0.232214 -3.869999
+[objRecController] Relative orientation of object 1: 0.095016 0.703906 -0.703909 2.952130
+[objRecController] Size of object 1: 0.610000 0.610003
+[objRecController] Position of the object 1 on the camera image: 196 150
+[objRecController] Size of the object 1 on the camera image: 77 78
+[objRecController] - Color 1/1: 0.400000 0.100000 0.100000
+[objRecController] 
+[objRecController] Recognized 2 objects.
+[objRecController] Model of object 0: 
+[objRecController] Id of object 0: 553
+[objRecController] Relative position of object 0: 0.853697 0.623319 -5.871596
+[objRecController] Relative orientation of object 0: -0.452052 -0.832160 -0.321182 2.183610
+[objRecController] Size of object 0: 0.400000 0.400000
+[objRecController] Position of the object 0 on the camera image: 243 133
+[objRecController] Size of the object 0 on the camera image: 34 33
+[objRecController] - Color 1/1: 0.000000 1.000000 0.000000
+[objRecController] Model of object 1: oil barrel
+[objRecController] Id of object 1: 1216
+[objRecController] Relative position of object 1: -0.125190 -0.560000 -5.767800
+[objRecController] Relative orientation of object 1: 0.000000 -1.000000 0.000000 0.268344
+[objRecController] Size of object 1: 0.610000 0.880000
+[objRecController] Position of the object 1 on the camera image: 170 224
+[objRecController] Size of the object 1 on the camera image: 49 71
+[objRecController] - Color 1/1: 0.400000 0.100000 0.100000
+[inverse_kinematics] ARM is at position: 0.998553 0.661973 -0.000851605
+[objRecController] 
+[objRecController] Recognized 2 objects.
+[objRecController] Model of object 0: 
+[objRecController] Id of object 0: 553
+[objRecController] Relative position of object 0: -0.853694 0.128417 -2.686681
+[objRecController] Relative orientation of object 0: 0.764103 0.044571 -0.643553 2.488757
+[objRecController] Size of object 0: 0.400000 0.400000
+[objRecController] Position of the object 0 on the camera image: 41 157
+[objRecController] Size of the object 0 on the camera image: 81 70
+[objRecController] - Color 1/1: 0.000000 1.000000 0.000000
+[objRecController] Model of object 1: oil barrel
+[objRecController] Id of object 1: 1216
+[objRecController] Relative position of object 1: 0.125190 0.232214 -3.869999
+[objRecController] Relative orientation of object 1: 0.095016 0.703906 -0.703909 2.952130
+[objRecController] Size of object 1: 0.610000 0.610003
+[objRecController] Position of the object 1 on the camera image: 196 150
+[objRecController] Size of the object 1 on the camera image: 77 78
+[objRecController] - Color 1/1: 0.400000 0.100000 0.100000
+[objRecController] 
+[objRecController] Recognized 2 objects.
+[objRecController] Model of object 0: 
+[objRecController] Id of object 0: 553
+[objRecController] Relative position of object 0: 0.853694 0.623319 -5.871593
+[objRecController] Relative orientation of object 0: -0.452052 -0.832160 -0.321182 2.183608
+[objRecController] Size of object 0: 0.400000 0.400000
+[objRecController] Position of the object 0 on the camera image: 243 133
+[objRecController] Size of the object 0 on the camera image: 34 33
+[objRecController] - Color 1/1: 0.000000 1.000000 0.000000
+[objRecController] Model of object 1: oil barrel
+[objRecController] Id of object 1: 1216
+[objRecController] Relative position of object 1: -0.125190 -0.560000 -5.767800
+[objRecController] Relative orientation of object 1: 0.000000 -1.000000 0.000000 0.268344
+[objRecController] Size of object 1: 0.610000 0.880000
+[objRecController] Position of the object 1 on the camera image: 170 224
+[objRecController] Size of the object 1 on the camera image: 49 71
+[objRecController] - Color 1/1: 0.400000 0.100000 0.100000
+[inverse_kinematics] ARM is at position: 0.998553 0.661973 -0.000851607
+[objRecController] 
+[objRecController] Recognized 2 objects.
+[objRecController] Model of object 0: 
+[objRecController] Id of object 0: 553
+[objRecController] Relative position of object 0: -0.853691 0.128420 -2.686681
+[objRecController] Relative orientation of object 0: 0.764102 0.044572 -0.643554 2.488757
+[objRecController] Size of object 0: 0.400000 0.400000
+[objRecController] Position of the object 0 on the camera image: 41 157
+[objRecController] Size of the object 0 on the camera image: 81 70
+[objRecController] - Color 1/1: 0.000000 1.000000 0.000000
+[objRecController] Model of object 1: oil barrel
+[objRecController] Id of object 1: 1216
+[objRecController] Relative position of object 1: 0.125190 0.232214 -3.869999
+[objRecController] Relative orientation of object 1: 0.095016 0.703906 -0.703909 2.952130
+[objRecController] Size of object 1: 0.610000 0.610003
+[objRecController] Position of the object 1 on the camera image: 196 150
+[objRecController] Size of the object 1 on the camera image: 77 78
+[objRecController] - Color 1/1: 0.400000 0.100000 0.100000
+[objRecController] 
+[objRecController] Recognized 2 objects.
+[objRecController] Model of object 0: 
+[objRecController] Id of object 0: 553
+[objRecController] Relative position of object 0: 0.853691 0.623319 -5.871590
+[objRecController] Relative orientation of object 0: -0.452053 -0.832160 -0.321182 2.183606
+[objRecController] Size of object 0: 0.400000 0.400000
+[objRecController] Position of the object 0 on the camera image: 243 133
+[objRecController] Size of the object 0 on the camera image: 34 33
+[objRecController] - Color 1/1: 0.000000 1.000000 0.000000
+[objRecController] Model of object 1: oil barrel
+[objRecController] Id of object 1: 1216
+[objRecController] Relative position of object 1: -0.125190 -0.560000 -5.767800
+[objRecController] Relative orientation of object 1: 0.000000 -1.000000 0.000000 0.268344
+[objRecController] Size of object 1: 0.610000 0.880000
+[objRecController] Position of the object 1 on the camera image: 170 224
+[objRecController] Size of the object 1 on the camera image: 49 71
+[objRecController] - Color 1/1: 0.400000 0.100000 0.100000
+[inverse_kinematics] ARM is at position: 0.998553 0.661973 -0.000851609
+[objRecController] 
+[objRecController] Recognized 2 objects.
+[objRecController] Model of object 0: 
+[objRecController] Id of object 0: 553
+[objRecController] Relative position of object 0: -0.853689 0.128423 -2.686681
+[objRecController] Relative orientation of object 0: 0.764101 0.044572 -0.643555 2.488757
+[objRecController] Size of object 0: 0.400000 0.400000
+[objRecController] Position of the object 0 on the camera image: 41 157
+[objRecController] Size of the object 0 on the camera image: 81 70
+[objRecController] - Color 1/1: 0.000000 1.000000 0.000000
+[objRecController] Model of object 1: oil barrel
+[objRecController] Id of object 1: 1216
+[objRecController] Relative position of object 1: 0.125190 0.232214 -3.869999
+[objRecController] Relative orientation of object 1: 0.095016 0.703906 -0.703909 2.952130
+[objRecController] Size of object 1: 0.610000 0.610003
+[objRecController] Position of the object 1 on the camera image: 196 150
+[objRecController] Size of the object 1 on the camera image: 77 78
+[objRecController] - Color 1/1: 0.400000 0.100000 0.100000
+[objRecController] 
+[objRecController] Recognized 2 objects.
+[objRecController] Model of object 0: 
+[objRecController] Id of object 0: 553
+[objRecController] Relative position of object 0: 0.853689 0.623319 -5.871587
+[objRecController] Relative orientation of object 0: -0.452054 -0.832160 -0.321181 2.183603
+[objRecController] Size of object 0: 0.400000 0.400000
+[objRecController] Position of the object 0 on the camera image: 243 133
+[objRecController] Size of the object 0 on the camera image: 34 33
+[objRecController] - Color 1/1: 0.000000 1.000000 0.000000
+[objRecController] Model of object 1: oil barrel
+[objRecController] Id of object 1: 1216
+[objRecController] Relative position of object 1: -0.125190 -0.560000 -5.767800
+[objRecController] Relative orientation of object 1: 0.000000 -1.000000 0.000000 0.268344
+[objRecController] Size of object 1: 0.610000 0.880000
+[objRecController] Position of the object 1 on the camera image: 170 224
+[objRecController] Size of the object 1 on the camera image: 49 71
+[objRecController] - Color 1/1: 0.400000 0.100000 0.100000
+[inverse_kinematics] ARM is at position: 0.998553 0.661973 -0.00085161
+[objRecController] 
+[objRecController] Recognized 2 objects.
+[objRecController] Model of object 0: 
+[objRecController] Id of object 0: 553
+[objRecController] Relative position of object 0: -0.853686 0.128426 -2.686681
+[objRecController] Relative orientation of object 0: 0.764100 0.044573 -0.643556 2.488757
+[objRecController] Size of object 0: 0.400000 0.400000
+[objRecController] Position of the object 0 on the camera image: 41 157
+[objRecController] Size of the object 0 on the camera image: 81 70
+[objRecController] - Color 1/1: 0.000000 1.000000 0.000000
+[objRecController] Model of object 1: oil barrel
+[objRecController] Id of object 1: 1216
+[objRecController] Relative position of object 1: 0.125190 0.232214 -3.869999
+[objRecController] Relative orientation of object 1: 0.095016 0.703906 -0.703909 2.952130
+[objRecController] Size of object 1: 0.610000 0.610003
+[objRecController] Position of the object 1 on the camera image: 196 150
+[objRecController] Size of the object 1 on the camera image: 77 78
+[objRecController] - Color 1/1: 0.400000 0.100000 0.100000
+[objRecController] 
+[objRecController] Recognized 2 objects.
+[objRecController] Model of object 0: 
+[objRecController] Id of object 0: 553
+[objRecController] Relative position of object 0: 0.853686 0.623319 -5.871584
+[objRecController] Relative orientation of object 0: -0.452055 -0.832160 -0.321181 2.183601
+[objRecController] Size of object 0: 0.400000 0.400000
+[objRecController] Position of the object 0 on the camera image: 243 133
+[objRecController] Size of the object 0 on the camera image: 34 33
+[objRecController] - Color 1/1: 0.000000 1.000000 0.000000
+[objRecController] Model of object 1: oil barrel
+[objRecController] Id of object 1: 1216
+[objRecController] Relative position of object 1: -0.125190 -0.560000 -5.767800
+[objRecController] Relative orientation of object 1: 0.000000 -1.000000 0.000000 0.268344
+[objRecController] Size of object 1: 0.610000 0.880000
+[objRecController] Position of the object 1 on the camera image: 170 224
+[objRecController] Size of the object 1 on the camera image: 49 71
+[objRecController] - Color 1/1: 0.400000 0.100000 0.100000
+[inverse_kinematics] ARM is at position: 0.998553 0.661973 -0.000851612
+[objRecController] 
+[objRecController] Recognized 2 objects.
+[objRecController] Model of object 0: 
+[objRecController] Id of object 0: 553
+[objRecController] Relative position of object 0: -0.853684 0.128428 -2.686681
+[objRecController] Relative orientation of object 0: 0.764100 0.044573 -0.643556 2.488757
+[objRecController] Size of object 0: 0.400000 0.400000
+[objRecController] Position of the object 0 on the camera image: 41 157
+[objRecController] Size of the object 0 on the camera image: 81 70
+[objRecController] - Color 1/1: 0.000000 1.000000 0.000000
+[objRecController] Model of object 1: oil barrel
+[objRecController] Id of object 1: 1216
+[objRecController] Relative position of object 1: 0.125190 0.232214 -3.869999
+[objRecController] Relative orientation of object 1: 0.095016 0.703906 -0.703909 2.952130
+[objRecController] Size of object 1: 0.610000 0.610003
+[objRecController] Position of the object 1 on the camera image: 196 150
+[objRecController] Size of the object 1 on the camera image: 77 78
+[objRecController] - Color 1/1: 0.400000 0.100000 0.100000
+[objRecController] 
+[objRecController] Recognized 2 objects.
+[objRecController] Model of object 0: 
+[objRecController] Id of object 0: 553
+[objRecController] Relative position of object 0: 0.853684 0.623319 -5.871582
+[objRecController] Relative orientation of object 0: -0.452055 -0.832159 -0.321180 2.183599
+[objRecController] Size of object 0: 0.400000 0.400000
+[objRecController] Position of the object 0 on the camera image: 243 133
+[objRecController] Size of the object 0 on the camera image: 34 33
+[objRecController] - Color 1/1: 0.000000 1.000000 0.000000
+[objRecController] Model of object 1: oil barrel
+[objRecController] Id of object 1: 1216
+[objRecController] Relative position of object 1: -0.125190 -0.560000 -5.767800
+[objRecController] Relative orientation of object 1: 0.000000 -1.000000 0.000000 0.268344
+[objRecController] Size of object 1: 0.610000 0.880000
+[objRecController] Position of the object 1 on the camera image: 170 224
+[objRecController] Size of the object 1 on the camera image: 49 71
+[objRecController] - Color 1/1: 0.400000 0.100000 0.100000
+[inverse_kinematics] ARM is at position: 0.998553 0.661973 -0.000851613
+[objRecController] 
+[objRecController] Recognized 2 objects.
+[objRecController] Model of object 0: 
+[objRecController] Id of object 0: 553
+[objRecController] Relative position of object 0: -0.853681 0.128431 -2.686681
+[objRecController] Relative orientation of object 0: 0.764099 0.044574 -0.643557 2.488757
+[objRecController] Size of object 0: 0.400000 0.400000
+[objRecController] Position of the object 0 on the camera image: 41 157
+[objRecController] Size of the object 0 on the camera image: 81 70
+[objRecController] - Color 1/1: 0.000000 1.000000 0.000000
+[objRecController] Model of object 1: oil barrel
+[objRecController] Id of object 1: 1216
+[objRecController] Relative position of object 1: 0.125190 0.232214 -3.869999
+[objRecController] Relative orientation of object 1: 0.095016 0.703906 -0.703909 2.952130
+[objRecController] Size of object 1: 0.610000 0.610003
+[objRecController] Position of the object 1 on the camera image: 196 150
+[objRecController] Size of the object 1 on the camera image: 77 78
+[objRecController] - Color 1/1: 0.400000 0.100000 0.100000
+[objRecController] 
+[objRecController] Recognized 2 objects.
+[objRecController] Model of object 0: 
+[objRecController] Id of object 0: 553
+[objRecController] Relative position of object 0: 0.853681 0.623319 -5.871579
+[objRecController] Relative orientation of object 0: -0.452056 -0.832159 -0.321180 2.183597
+[objRecController] Size of object 0: 0.400000 0.400000
+[objRecController] Position of the object 0 on the camera image: 243 133
+[objRecController] Size of the object 0 on the camera image: 34 33
+[objRecController] - Color 1/1: 0.000000 1.000000 0.000000
+[objRecController] Model of object 1: oil barrel
+[objRecController] Id of object 1: 1216
+[objRecController] Relative position of object 1: -0.125190 -0.560000 -5.767800
+[objRecController] Relative orientation of object 1: 0.000000 -1.000000 0.000000 0.268344
+[objRecController] Size of object 1: 0.610000 0.880000
+[objRecController] Position of the object 1 on the camera image: 170 224
+[objRecController] Size of the object 1 on the camera image: 49 71
+[objRecController] - Color 1/1: 0.400000 0.100000 0.100000
+[inverse_kinematics] ARM is at position: 0.998553 0.661973 -0.000851614
+[objRecController] 
+[objRecController] Recognized 2 objects.
+[objRecController] Model of object 0: 
+[objRecController] Id of object 0: 553
+[objRecController] Relative position of object 0: -0.853679 0.128433 -2.686681
+[objRecController] Relative orientation of object 0: 0.764098 0.044574 -0.643558 2.488757
+[objRecController] Size of object 0: 0.400000 0.400000
+[objRecController] Position of the object 0 on the camera image: 41 157
+[objRecController] Size of the object 0 on the camera image: 81 70
+[objRecController] - Color 1/1: 0.000000 1.000000 0.000000
+[objRecController] Model of object 1: oil barrel
+[objRecController] Id of object 1: 1216
+[objRecController] Relative position of object 1: 0.125190 0.232214 -3.869999
+[objRecController] Relative orientation of object 1: 0.095016 0.703906 -0.703909 2.952130
+[objRecController] Size of object 1: 0.610000 0.610003
+[objRecController] Position of the object 1 on the camera image: 196 150
+[objRecController] Size of the object 1 on the camera image: 77 78
+[objRecController] - Color 1/1: 0.400000 0.100000 0.100000
+[objRecController] 
+[objRecController] Recognized 2 objects.
+[objRecController] Model of object 0: 
+[objRecController] Id of object 0: 553
+[objRecController] Relative position of object 0: 0.853679 0.623319 -5.871577
+[objRecController] Relative orientation of object 0: -0.452056 -0.832159 -0.321180 2.183596
+[objRecController] Size of object 0: 0.400000 0.400000
+[objRecController] Position of the object 0 on the camera image: 243 133
+[objRecController] Size of the object 0 on the camera image: 34 33
+[objRecController] - Color 1/1: 0.000000 1.000000 0.000000
+[objRecController] Model of object 1: oil barrel
+[objRecController] Id of object 1: 1216
+[objRecController] Relative position of object 1: -0.125190 -0.560000 -5.767800
+[objRecController] Relative orientation of object 1: 0.000000 -1.000000 0.000000 0.268344
+[objRecController] Size of object 1: 0.610000 0.880000
+[objRecController] Position of the object 1 on the camera image: 170 224
+[objRecController] Size of the object 1 on the camera image: 49 71
+[objRecController] - Color 1/1: 0.400000 0.100000 0.100000
+[inverse_kinematics] ARM is at position: 0.998553 0.661973 -0.000851616
+[objRecController] 
+[objRecController] Recognized 2 objects.
+[objRecController] Model of object 0: 
+[objRecController] Id of object 0: 553
+[objRecController] Relative position of object 0: -0.853677 0.128436 -2.686681
+[objRecController] Relative orientation of object 0: 0.764098 0.044574 -0.643559 2.488757
+[objRecController] Size of object 0: 0.400000 0.400000
+[objRecController] Position of the object 0 on the camera image: 41 157
+[objRecController] Size of the object 0 on the camera image: 81 70
+[objRecController] - Color 1/1: 0.000000 1.000000 0.000000
+[objRecController] Model of object 1: oil barrel
+[objRecController] Id of object 1: 1216
+[objRecController] Relative position of object 1: 0.125190 0.232214 -3.869999
+[objRecController] Relative orientation of object 1: 0.095016 0.703906 -0.703909 2.952130
+[objRecController] Size of object 1: 0.610000 0.610003
+[objRecController] Position of the object 1 on the camera image: 196 150
+[objRecController] Size of the object 1 on the camera image: 77 78
+[objRecController] - Color 1/1: 0.400000 0.100000 0.100000
+[objRecController] 
+[objRecController] Recognized 2 objects.
+[objRecController] Model of object 0: 
+[objRecController] Id of object 0: 553
+[objRecController] Relative position of object 0: 0.853677 0.623319 -5.871574
+[objRecController] Relative orientation of object 0: -0.452057 -0.832159 -0.321179 2.183594
+[objRecController] Size of object 0: 0.400000 0.400000
+[objRecController] Position of the object 0 on the camera image: 243 133
+[objRecController] Size of the object 0 on the camera image: 34 33
+[objRecController] - Color 1/1: 0.000000 1.000000 0.000000
+[objRecController] Model of object 1: oil barrel
+[objRecController] Id of object 1: 1216
+[objRecController] Relative position of object 1: -0.125190 -0.560000 -5.767800
+[objRecController] Relative orientation of object 1: 0.000000 -1.000000 0.000000 0.268344
+[objRecController] Size of object 1: 0.610000 0.880000
+[objRecController] Position of the object 1 on the camera image: 170 224
+[objRecController] Size of the object 1 on the camera image: 49 71
+[objRecController] - Color 1/1: 0.400000 0.100000 0.100000
+[inverse_kinematics] ARM is at position: 0.998553 0.661973 -0.000851617
+[objRecController] 
+[objRecController] Recognized 2 objects.
+[objRecController] Model of object 0: 
+[objRecController] Id of object 0: 553
+[objRecController] Relative position of object 0: -0.853675 0.128438 -2.686681
+[objRecController] Relative orientation of object 0: 0.764097 0.044575 -0.643560 2.488758
+[objRecController] Size of object 0: 0.400000 0.400000
+[objRecController] Position of the object 0 on the camera image: 41 157
+[objRecController] Size of the object 0 on the camera image: 81 70
+[objRecController] - Color 1/1: 0.000000 1.000000 0.000000
+[objRecController] Model of object 1: oil barrel
+[objRecController] Id of object 1: 1216
+[objRecController] Relative position of object 1: 0.125190 0.232214 -3.869999
+[objRecController] Relative orientation of object 1: 0.095016 0.703906 -0.703909 2.952130
+[objRecController] Size of object 1: 0.610000 0.610003
+[objRecController] Position of the object 1 on the camera image: 196 150
+[objRecController] Size of the object 1 on the camera image: 77 78
+[objRecController] - Color 1/1: 0.400000 0.100000 0.100000
+[objRecController] 
+[objRecController] Recognized 2 objects.
+[objRecController] Model of object 0: 
+[objRecController] Id of object 0: 553
+[objRecController] Relative position of object 0: 0.853675 0.623319 -5.871572
+[objRecController] Relative orientation of object 0: -0.452057 -0.832159 -0.321179 2.183592
+[objRecController] Size of object 0: 0.400000 0.400000
+[objRecController] Position of the object 0 on the camera image: 243 133
+[objRecController] Size of the object 0 on the camera image: 34 33
+[objRecController] - Color 1/1: 0.000000 1.000000 0.000000
+[objRecController] Model of object 1: oil barrel
+[objRecController] Id of object 1: 1216
+[objRecController] Relative position of object 1: -0.125190 -0.560000 -5.767800
+[objRecController] Relative orientation of object 1: 0.000000 -1.000000 0.000000 0.268344
+[objRecController] Size of object 1: 0.610000 0.880000
+[objRecController] Position of the object 1 on the camera image: 170 224
+[objRecController] Size of the object 1 on the camera image: 49 71
+[objRecController] - Color 1/1: 0.400000 0.100000 0.100000
+[inverse_kinematics] ARM is at position: 0.998553 0.661973 -0.000851618
+[objRecController] 
+[objRecController] Recognized 2 objects.
+[objRecController] Model of object 0: 
+[objRecController] Id of object 0: 553
+[objRecController] Relative position of object 0: -0.853673 0.128440 -2.686681
+[objRecController] Relative orientation of object 0: 0.764096 0.044575 -0.643560 2.488758
+[objRecController] Size of object 0: 0.400000 0.400000
+[objRecController] Position of the object 0 on the camera image: 41 157
+[objRecController] Size of the object 0 on the camera image: 81 70
+[objRecController] - Color 1/1: 0.000000 1.000000 0.000000
+[objRecController] Model of object 1: oil barrel
+[objRecController] Id of object 1: 1216
+[objRecController] Relative position of object 1: 0.125190 0.232214 -3.869999
+[objRecController] Relative orientation of object 1: 0.095016 0.703906 -0.703909 2.952130
+[objRecController] Size of object 1: 0.610000 0.610003
+[objRecController] Position of the object 1 on the camera image: 196 150
+[objRecController] Size of the object 1 on the camera image: 77 78
+[objRecController] - Color 1/1: 0.400000 0.100000 0.100000
+[objRecController] 
+[objRecController] Recognized 2 objects.
+[objRecController] Model of object 0: 
+[objRecController] Id of object 0: 553
+[objRecController] Relative position of object 0: 0.853673 0.623319 -5.871570
+[objRecController] Relative orientation of object 0: -0.452058 -0.832159 -0.321179 2.183591
+[objRecController] Size of object 0: 0.400000 0.400000
+[objRecController] Position of the object 0 on the camera image: 243 133
+[objRecController] Size of the object 0 on the camera image: 34 33
+[objRecController] - Color 1/1: 0.000000 1.000000 0.000000
+[objRecController] Model of object 1: oil barrel
+[objRecController] Id of object 1: 1216
+[objRecController] Relative position of object 1: -0.125190 -0.560000 -5.767800
+[objRecController] Relative orientation of object 1: 0.000000 -1.000000 0.000000 0.268344
+[objRecController] Size of object 1: 0.610000 0.880000
+[objRecController] Position of the object 1 on the camera image: 170 224
+[objRecController] Size of the object 1 on the camera image: 49 71
+[objRecController] - Color 1/1: 0.400000 0.100000 0.100000
+[inverse_kinematics] ARM is at position: 0.998553 0.661973 -0.000851619
+[objRecController] 
+[objRecController] Recognized 2 objects.
+[objRecController] Model of object 0: 
+[objRecController] Id of object 0: 553
+[objRecController] Relative position of object 0: -0.853671 0.128442 -2.686681
+[objRecController] Relative orientation of object 0: 0.764096 0.044575 -0.643561 2.488758
+[objRecController] Size of object 0: 0.400000 0.400000
+[objRecController] Position of the object 0 on the camera image: 41 157
+[objRecController] Size of the object 0 on the camera image: 81 70
+[objRecController] - Color 1/1: 0.000000 1.000000 0.000000
+[objRecController] Model of object 1: oil barrel
+[objRecController] Id of object 1: 1216
+[objRecController] Relative position of object 1: 0.125190 0.232214 -3.869999
+[objRecController] Relative orientation of object 1: 0.095016 0.703906 -0.703909 2.952130
+[objRecController] Size of object 1: 0.610000 0.610003
+[objRecController] Position of the object 1 on the camera image: 196 150
+[objRecController] Size of the object 1 on the camera image: 77 78
+[objRecController] - Color 1/1: 0.400000 0.100000 0.100000
+[objRecController] 
+[objRecController] Recognized 2 objects.
+[objRecController] Model of object 0: 
+[objRecController] Id of object 0: 553
+[objRecController] Relative position of object 0: 0.853671 0.623319 -5.871568
+[objRecController] Relative orientation of object 0: -0.452058 -0.832158 -0.321179 2.183590
+[objRecController] Size of object 0: 0.400000 0.400000
+[objRecController] Position of the object 0 on the camera image: 243 133
+[objRecController] Size of the object 0 on the camera image: 34 33
+[objRecController] - Color 1/1: 0.000000 1.000000 0.000000
+[objRecController] Model of object 1: oil barrel
+[objRecController] Id of object 1: 1216
+[objRecController] Relative position of object 1: -0.125190 -0.560000 -5.767800
+[objRecController] Relative orientation of object 1: 0.000000 -1.000000 0.000000 0.268344
+[objRecController] Size of object 1: 0.610000 0.880000
+[objRecController] Position of the object 1 on the camera image: 170 224
+[objRecController] Size of the object 1 on the camera image: 49 71
+[objRecController] - Color 1/1: 0.400000 0.100000 0.100000
+[inverse_kinematics] ARM is at position: 0.998553 0.661973 -0.000850643
+[objRecController] 
+[objRecController] Recognized 2 objects.
+[objRecController] Model of object 0: 
+[objRecController] Id of object 0: 553
+[objRecController] Relative position of object 0: -0.853028 0.129151 -2.686673
+[objRecController] Relative orientation of object 0: 0.763866 0.044748 -0.643821 2.488801
+[objRecController] Size of object 0: 0.400000 0.400000
+[objRecController] Position of the object 0 on the camera image: 41 157
+[objRecController] Size of the object 0 on the camera image: 81 70
+[objRecController] - Color 1/1: 0.000000 1.000000 0.000000
+[objRecController] Model of object 1: oil barrel
+[objRecController] Id of object 1: 1216
+[objRecController] Relative position of object 1: 0.125190 0.232214 -3.869999
+[objRecController] Relative orientation of object 1: 0.095016 0.703906 -0.703909 2.952130
+[objRecController] Size of object 1: 0.610000 0.610003
+[objRecController] Position of the object 1 on the camera image: 196 150
+[objRecController] Size of the object 1 on the camera image: 77 78
+[objRecController] - Color 1/1: 0.400000 0.100000 0.100000
+[objRecController] 
+[objRecController] Recognized 2 objects.
+[objRecController] Model of object 0: 
+[objRecController] Id of object 0: 553
+[objRecController] Relative position of object 0: 0.853028 0.623326 -5.870859
+[objRecController] Relative orientation of object 0: -0.452205 -0.832116 -0.321081 2.182928
+[objRecController] Size of object 0: 0.400000 0.400000
+[objRecController] Position of the object 0 on the camera image: 243 133
+[objRecController] Size of the object 0 on the camera image: 34 33
+[objRecController] - Color 1/1: 0.000000 1.000000 0.000000
+[objRecController] Model of object 1: oil barrel
+[objRecController] Id of object 1: 1216
+[objRecController] Relative position of object 1: -0.125190 -0.560000 -5.767800
+[objRecController] Relative orientation of object 1: 0.000000 -1.000000 0.000000 0.268344
+[objRecController] Size of object 1: 0.610000 0.880000
+[objRecController] Position of the object 1 on the camera image: 170 224
+[objRecController] Size of the object 1 on the camera image: 49 71
+[objRecController] - Color 1/1: 0.400000 0.100000 0.100000
+INFO: Creating video...
+Recording at 31.25 FPS, 22781250 bit/s.
+Video encoding stage 1... (please wait)
+Video encoding stage 2... (please wait)
+INFO: Video creation finished.
