@@ -1,0 +1,664 @@
+#VRML_SIM R2020a utf8
+WorldInfo {
+  basicTimeStep 16
+}
+Viewpoint {
+  fieldOfView 0.85
+  orientation 0.6351327435564031 0.7723431308949713 0.009616975713260728 6.243980611005211
+  position 1.225225214421216 1.1232974231571657 8.097857927984037
+  follow "robot:IRB 4600/40:solid:solid:solid:solid:solid:solid:pen"
+  followType "Pan and Tilt Shot"
+}
+TexturedBackground {
+  texture "empty_office"
+}
+PointLight {
+  attenuation 0 0 1
+  intensity 10
+  location -4 6 5
+  castShadows TRUE
+}
+PointLight {
+  attenuation 0 0 1
+  intensity 10
+  location 5 6 5
+}
+Floor {
+  translation 0 0 4.3
+  name "floor(1)"
+  size 20 16.4
+  tileSize 1 1
+  appearance ThreadMetalPlate {
+  }
+}
+Ball {
+  translation 5.14681 0.9999568360000002 9.07841
+  color 1 1 1
+  radius 1
+}
+SolidRoundedBox {
+  translation 5.02226 1 6.30521
+  appearance PBRAppearance {
+    roughness 0.5
+    metalness 0
+  }
+}
+Robot {
+  translation -1 0 4.84
+  children [
+    Camera {
+      translation 1 2 1
+      name "cam1"
+      recognition Recognition {
+      }
+    }
+    Table {
+      size 3 0.74 3
+      feetPadding 0.05
+      frameThickness 0.1
+      trayAppearance OldSteel {
+        textureTransform TextureTransform {
+          scale 2 2
+        }
+      }
+      legAppearance GalvanizedMetal {
+      }
+    }
+    DEF ARM Irb4600-40 {
+      hidden position_0_0 -0.7009566254665953
+      hidden linearVelocity_0 6.68051949078067e-09 2.2784575310927866e-09 -1.632659010382113e-09
+      hidden angularVelocity_0 6.626826254601934e-09 -1.5723959015176917e-08 9.319611706192074e-09
+      hidden translation_1 0 0 0.159498
+      hidden rotation_1 0 0 -1 0.7009566254665955
+      hidden position_1_0 0.4396841646826979
+      hidden linearVelocity_1 8.456265997874895e-09 6.742578069635845e-09 3.793297559057519e-09
+      hidden angularVelocity_1 1.3365429712751698e-08 -3.1299013156799234e-08 1.889086649226608e-08
+      hidden translation_2 0.178445 -0.122498 0.334888
+      hidden rotation_2 0 1 0 0.43968416468269755
+      hidden position_2_0 0.4255563358928369
+      hidden linearVelocity_2 -1.4327079936045282e-08 8.169187168976893e-09 2.097457748690275e-08
+      hidden angularVelocity_2 2.1808536604456533e-08 -4.992089444308458e-08 3.109752209907518e-08
+      hidden translation_3 -0.003447 -0.0267 1.095594
+      hidden rotation_3 0 1 0 0.4255563358928373
+      hidden position_3_0 -0.0006229598543014248
+      hidden linearVelocity_3 -2.2623970314398124e-08 3.070433916023875e-08 5.950915865124922e-08
+      hidden angularVelocity_3 3.207658193167691e-08 -7.178835337051039e-08 5.101594838518722e-08
+      hidden translation_4 0.340095 0.149198 0.174998
+      hidden rotation_4 -1 0 0 0.0006229598543177006
+      hidden position_4_0 0.28138086778671384
+      hidden linearVelocity_4 -7.260567955572616e-07 -7.117824769419449e-07 -5.102894215768719e-07
+      hidden angularVelocity_4 -0.000191116406987331 0.00030509903383703417 -0.00016260271098551035
+      hidden translation_5 0.929888 0 0
+      hidden rotation_5 0 1 0 0.28138086778671306
+      hidden position_5_0 -0.5622026553285703
+      hidden linearVelocity_5 3.329647969812406e-07 4.287071075642336e-07 3.84950209237921e-07
+      hidden angularVelocity_5 -0.00019111599134487856 0.00030509849534566256 -0.00016260236404903067
+      hidden translation_6 0.125 0 0
+      hidden rotation_6 -1 0 0 0.56220265532857
+      hidden linearVelocity_6 -7.89265076630524e-06 -2.442293307058312e-07 8.790233838280745e-06
+      hidden angularVelocity_6 -0.00019114840659522432 0.0003051976101941577 -0.00016263018572641844
+      translation 0.9984089760400332 0.6551777323636582 -0.0009353334451214224
+      rotation 0.999944560982971 -0.007477161356423764 0.007413974549697581 -1.562628379719694
+      supervisor TRUE
+      handSlot [
+        Solid {
+          translation 0 0.63 -0.2
+          children [
+            Shape {
+              appearance BrushedAluminium {
+              }
+              geometry Sphere {
+                radius 0.2
+              }
+            }
+          ]
+          recognitionColors [
+            0 1 0
+          ]
+        }
+        Pen {
+          translation 0 0 0.02
+          rotation 1 0 0 -1.5708
+          children [
+            Transform {
+              translation 0 0.05 0
+              children [
+                Shape {
+                  appearance BrushedAluminium {
+                    colorOverride 0 0.4131074998092622 0.9919279774166476
+                  }
+                  geometry Cylinder {
+                    height 0.05
+                    radius 0.04
+                    subdivision 24
+                  }
+                }
+              ]
+            }
+            Transform {
+              translation 0 0.04 0
+              children [
+                Shape {
+                  appearance BrushedAluminium {
+                    colorOverride 0 0 0
+                  }
+                  geometry Cylinder {
+                    height 0.07
+                    radius 0.01
+                    subdivision 12
+                  }
+                }
+              ]
+            }
+          ]
+          leadSize 0.01
+          maxDistance 0.05
+        }
+      ]
+    }
+  ]
+  controller ""
+}
+DEF TABLE_WITH_PAPER_SHEET Transform {
+  translation 2.08 0 5.8
+  children [
+    DEF PAPER Transform {
+      translation 0 0.741 0
+      children [
+        Shape {
+          appearance Appearance {
+            material Material {
+            }
+            texture ImageTexture {
+              url [
+                "textures/plastic.jpg"
+              ]
+            }
+          }
+          geometry Plane {
+            size 0.8 0.8
+          }
+        }
+      ]
+    }
+    Table {
+      translation 0.22 0 0
+      size 1 0.74 1
+      feetPadding 0.05
+      frameThickness 0.1
+    }
+  ]
+}
+DEF TARGET Solid {
+  translation 1.22 1.29 5.87
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColorMap ImageTexture {
+          url [
+            "textures/target.png"
+          ]
+        }
+        roughnessMap ImageTexture {
+          url [
+            "textures/target.png"
+          ]
+        }
+        metalnessMap ImageTexture {
+          url [
+            "textures/target.png"
+          ]
+        }
+        emissiveColorMap ImageTexture {
+          url [
+            "textures/target.png"
+          ]
+        }
+        textureTransform TextureTransform {
+          scale 2 1
+        }
+      }
+      geometry Sphere {
+        radius 0.1
+        subdivision 2
+      }
+    }
+  ]
+}
+Door {
+  hidden translation_5 1.0463048205622272e-09 0 0.001000003335535099
+  hidden rotation_5 0 1 0 0
+  translation 10.04 3.27 4
+  rotation 0 1 0 4.7123889
+  name "door(1)"
+  position -6.500054066609493e-09
+  doorAppearance GlossyPaint {
+    baseColor 0.16 0.16 0.16
+  }
+  frameAppearance GlossyPaint {
+    baseColor 0.35 0.35 0.35
+  }
+}
+OilBarrel {
+  translation 2.12519 0.44 5.7678
+  rotation 0 1 0 2.8732483
+  name "oil barrel(1)"
+}
+OilBarrel {
+  translation 8.4218847 0.44 -2.1373536
+  rotation 0 1 0 2.8732483
+  name "oil barrel(2)"
+}
+OilBarrel {
+  translation 8.2750954 0.44 -3.0222101
+  rotation 0 -1 0 0.3403392
+}
+Door {
+  hidden translation_5 1.0463024335827242e-09 0 0.0010000033355271887
+  hidden rotation_5 0 1 0 0
+  translation -10.05 0.02 0
+  rotation 0 1 0 1.5707963
+  position -6.5000427303382286e-09
+  doorAppearance GlossyPaint {
+    baseColor 0.16 0.16 0.16
+  }
+  frameAppearance GlossyPaint {
+    baseColor 0.35 0.3503166247043564 0.35
+  }
+}
+Floor {
+  translation 0 7 4.22
+  rotation 0 0 1 3.1415926
+  size 20 16.4
+  tileSize 1 1
+  appearance PBRAppearance {
+    baseColorMap ImageTexture {
+      url [
+        "textures/asphalt.jpg"
+      ]
+    }
+    roughness 1
+    metalness 0
+  }
+}
+LJoint {
+  translation -7.571 0.712 -3.19
+  rotation 0 1 0 1.5707963
+  name "L joint pipe(1)"
+}
+LJoint {
+  translation -7.571 2.422 -3.277
+  rotation 0.7071067761865476 0 0.7071067861865474 3.1415926
+}
+WoodenPallet {
+  translation -3.05 0.52 12.1
+  rotation 1 0 0 5.2359877
+}
+CardboardBox {
+  translation 2.2324987 0.31 11.807743
+}
+WoodenPalletStack {
+  translation -6.8424942 0 11.754332
+  rotation 0 1 0 1.5707963
+  name "wooden pallet stack(1)"
+  palletNumber 6
+}
+WoodenPalletStack {
+  translation -5.2560137 0 11.74814
+  rotation 0 1 0 1.5707963
+  palletNumber 20
+}
+WoodenBox {
+  translation 0.070787217 0.3 11.12746
+  rotation 0 1 0 5.7595865
+  name "wooden box(1)"
+}
+WoodenBox {
+  translation 0.14546116 0.3 11.909219
+  name "wooden box(2)"
+}
+WoodenBox {
+  translation -1.1321262 0.3 11.1489
+  rotation 0 1 0 0.78539816
+  name "wooden box(3)"
+}
+WoodenBox {
+  translation 1.5463886 0.3 11.768592
+  name "wooden box(4)"
+}
+WoodenBox {
+  translation -0.49883855 0.3 11.765703
+  name "wooden box(5)"
+}
+WoodenBox {
+  translation 0.95220994 0.3 10.946614
+  rotation 0 1 0 4.9741884
+  name "wooden box(6)"
+}
+WoodenBox {
+  translation 0.91693757 0.3 11.921006
+  name "wooden box(7)"
+}
+WoodenBox {
+  translation 0.74212598 0.9 12.012516
+  name "wooden box(8)"
+}
+WoodenBox {
+  translation -0.5072975 1.52 11.706525
+  name "wooden box(9)"
+}
+WoodenBox {
+  translation -0.48872581 0.93 11.691652
+}
+LeverValve {
+  hidden position_0_0 -3.9332757451305346e-08
+  hidden translation_1 0 -5.898059818321144e-17 -1.5739102189352318e-09
+  hidden rotation_1 -1 0 0 8.429369702178807e-08
+  translation -7.5791585 0.692 -3
+  rotation 0 1 0 1.5707963
+}
+LargeValve {
+  hidden position_0_0 -15.707963268010753
+  hidden translation_1 0 0 -1.6979038619524542e-11
+  hidden rotation_1 1 0 0 0
+  hidden linearVelocity_1 2.2230173570612016e-14 2.6683370596660133e-15 -1.1102306493610944e-14
+  hidden angularVelocity_1 -1.1668618651574e-17 -2.1540052149896463e-15 -1.245262118848326e-14
+  translation -5.7149744 0.706 -2.9726835
+  rotation 0 1 0 1.5707963
+}
+PipeSection {
+  translation -7.5740452 0.18 -3
+  rotation 0 0 -1 6.2831816
+  name "pipe section(1)"
+  height 1.2
+}
+PipeSection {
+  translation -5.2940471 0.7 -3
+  rotation 0 0 -1 1.5707926
+  name "pipe section(2)"
+  height 0.9
+  radius 0.02
+}
+PipeSection {
+  translation -7.5720026 1.56 -3.234
+  rotation 0 0 -1 6.2831816
+  name "pipe section(3)"
+  height 1.6
+}
+PipeSection {
+  translation -4.8579962 0.35 -3
+  rotation 0 0 -1 6.2831816
+  name "pipe section(4)"
+  height 0.7
+  radius 0.02
+}
+PipeSection {
+  translation -6.6249962 0.706 -3
+  name "pipe section(5)"
+  height 1.7
+}
+PipeSection {
+  translation -7.572 2.4659975 -3.74
+  rotation 0.5773488491887547 0.5773509791887517 0.5773509791887517 2.0943972
+  name "pipe section(6)"
+  height 0.8
+}
+PipeSection {
+  translation -5.714996 0.65600436 -3.37
+  rotation 0.5773488591887668 0.5773509791887638 -0.5773509691887639 4.1887881
+  height 0.8
+}
+SmallValve {
+  hidden position_0_0 -15.706000067774731
+  hidden translation_1 -0.006000000000000009 -0.020399999999999995 6.91302262386084e-10
+  hidden rotation_1 -1 0 0 3.1416294677733414
+  hidden linearVelocity_1 -1.9546020064980646e-16 -2.3325009549783183e-15 -1.3395162030221907e-21
+  hidden angularVelocity_1 -3.0752470572728204e-15 -3.5404752966086045e-15 1.1620921215804125e-12
+  translation -4.8638332 0.707 -3
+  rotation 0 1 0 1.5707963
+}
+Wall {
+  translation 0 0 -3.82
+  name "wall(1)"
+  size 20 7 0.2
+  appearance Roughcast {
+    textureTransform TextureTransform {
+      scale 5 1.725
+    }
+  }
+}
+Cabinet {
+  translation -0.46 0 -3.84
+  name "cabinet(1)"
+  columnsWidths [
+    1.3, 0.17, 0.17
+  ]
+  layout [
+    "Shelf (1, 5, 3, 0)"
+    "Shelf (1, 4, 3, 0)"
+    "Shelf (1, 3, 3, 0)"
+    "Shelf (1, 2, 3, 0)"
+  ]
+}
+Cabinet {
+  hidden translation_6 -0.5000000002054866 0.7497917008827096 0.4999999985254462
+  hidden rotation_6 0.989990961937449 5.627350070757523e-08 -0.14113077368937552 7.970058544833896e-05
+  hidden position_6_0 -0.0032677053581391946
+  hidden translation_7 -9.50777693037308e-06 0 0.003075735302097667
+  hidden rotation_7 0 -1 0 0.006182421900734868
+  hidden translation_10 0.5000000002054874 0.749791700885429 0.4999999985254462
+  hidden rotation_10 -0.9899909359827087 5.627228834204352e-08 -0.1411309557541395 -7.97005816512644e-05
+  hidden position_10_0 0.0032677052392731617
+  hidden translation_11 9.507776018879976e-06 0 0.0030757351544316944
+  hidden rotation_11 0 1 0 0.006182421602995118
+  translation 1.49 0 -3.84
+  columnsWidths [
+    1, 1
+  ]
+  layout [
+    "RightSidedDoor (1, 1, 1, 5, 1.5)"
+    "LeftSidedDoor (2, 1, 1, 5, 1.5)"
+  ]
+}
+Wall {
+  translation 0 0 12.5
+  name "wall(2)"
+  size 20 7 0.2
+  appearance Roughcast {
+    textureTransform TextureTransform {
+      scale 5 1.725
+    }
+  }
+}
+Wall {
+  translation -10 0 4.3
+  rotation 0 1 0 1.57085
+  name "wall(3)"
+  size 16.5 7 0.2
+  appearance Roughcast {
+    textureTransform TextureTransform {
+      scale 4.125 1.725
+    }
+  }
+}
+Wall {
+  translation 10 0 4.3
+  rotation 0 -1 0 4.7123353
+  size 16.5 7 0.2
+  appearance Roughcast {
+    textureTransform TextureTransform {
+      scale 4.125 1.725
+    }
+  }
+}
+Solid {
+  translation -9.87 4.13 6.36
+  rotation 0.7071067911865474 0.7071067711865474 0 3.1415926
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.8 0.8 0.8
+        baseColorMap ImageTexture {
+          url [
+            "textures/ladybug.png"
+          ]
+          filtering 5
+        }
+        transparency 0.6
+        roughness 0.5
+        metalness 0
+        textureTransform TextureTransform {
+          rotation 1.5708
+        }
+      }
+      geometry Plane {
+        size 5 5
+      }
+    }
+  ]
+  name "stair platform"
+}
+Solid {
+  translation 9.25 3.21 3.95
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.8 0.8 0.8
+        baseColorMap ImageTexture {
+          url [
+            "textures/steel_floor.jpg"
+          ]
+        }
+        roughness 0.5
+        metalness 0
+        textureTransform TextureTransform {
+          scale 2 2
+        }
+      }
+      geometry Box {
+        size 1.5 0.12 2.6
+      }
+    }
+  ]
+  name "ladybug"
+}
+StraightStairsRail {
+  translation 8.52 3.27 2.73
+  rotation 0 1 0 4.712389
+  name "straight stairs rail(1)"
+  run 2.5
+  rise 0
+  newelHeight 0.89
+  balusterHeight 0.9
+  nBalusters 9
+  appearance PBRAppearance {
+    baseColor 0.8 0.8 0.8
+    roughness 0.5
+    metalness 0
+    textureTransform TextureTransform {
+      rotation 1.5708
+    }
+  }
+}
+StraightStairsRail {
+  translation 8.57 3.27 5.23
+  rotation 0 -1 0 6.2831853
+  run 1.3
+  rise 0
+  newelHeight 0.89
+  balusterHeight 0.9
+  nBalusters 5
+  appearance PBRAppearance {
+    baseColor 0.8 0.8 0.8
+    roughness 0.5
+    metalness 0
+    textureTransform TextureTransform {
+      rotation 1.5708
+    }
+  }
+}
+StraightStairs {
+  translation 9.201 0 -0.17
+  rotation 0 1 0 -1.5707997
+  stepSize 0.3 0.01 1.34
+  stepRise 0.297
+  nSteps 10
+  stepAppearance PBRAppearance {
+    baseColor 0.8 0.8 0.8
+    roughness 0.5
+    metalness 0
+    textureTransform TextureTransform {
+      rotation 1.5708
+      scale 3 1
+    }
+  }
+  stringerAppearance PBRAppearance {
+    baseColor 0.8 0.8 0.8
+    roughness 0.5
+    metalness 0
+    textureTransform TextureTransform {
+      rotation 1.5708
+      scale 3 3
+    }
+  }
+  leftRail []
+  rightRail [
+    StraightStairsRail {
+      run 3
+      rise 2.97
+      newelHeight 0.862
+      balusterHeight 0.83
+      nBalusters 12
+      appearance PBRAppearance {
+        baseColor 0.8 0.8 0.8
+        roughness 0.5
+        metalness 0
+        textureTransform TextureTransform {
+          rotation 1.5708
+        }
+      }
+    }
+  ]
+}
+SolidPipe {
+  translation 1.19809 0.52 5.88555
+  rotation 1 0 0 -1.5707953071795862
+  radius 0.5
+  appearance PBRAppearance {
+    roughness 0.5
+    metalness 0
+  }
+}
+Robot {
+  translation 0 0.31 0
+  children [
+    Camera {
+      translation 2 4 6
+      rotation -1 0 0 1.5708
+      width 360
+      height 360
+      recognition Recognition {
+      }
+    }
+  ]
+  name "CameraBot"
+  controller "objRecController"
+}
+Robot {
+  children [
+    Camera {
+      translation 2 1 0
+      rotation 0 1 0 -9.42477796076938
+      width 360
+      height 360
+      recognition Recognition {
+      }
+    }
+  ]
+  name "CameraBot2"
+  controller "objRecController"
+}
+Solid {
+  translation 2 1 6
+  name "solid(1)"
+}
