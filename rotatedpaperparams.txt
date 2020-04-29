@@ -1,0 +1,18 @@
+x 0
+y 0.741
+z 0
+rot
+x 0
+y 1
+z 0
+angle = 0
+for rotated
+z_arr = [0.0092*i + 0.32 for i in range(arr_size)]
+x -0.0012941
+y 1.09324
+z -0.00965926
+rot
+x -0.527975
+y 0.304826
+z -0.792669
+angle -0.609785
