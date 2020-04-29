@@ -26,6 +26,9 @@ import math
 from controller import Supervisor, Camera, CameraRecognitionObject
 import numpy as np
 
+def makeSquareArrays(x,y,z):
+    z=[0.32 for i in range(160)]
+    # x = [
 # Create the arm chain.
 # The constants below have been manually extracted from the Irb4600-40.proto file, looking at the HingeJoint node fields.
 # The chain should contain the "E motor" bone, because this bone defines the hand position.
@@ -84,19 +87,48 @@ target = supervisor.getFromDef('TARGET')
 arm = supervisor.getFromDef('ARM')
 trans_field = arm.getField("translation")
 
-
 # cam1 = supervisor.getCamera("cam1")
 # cam1.enable()
 # Loop 1: Draw a circle on the paper sheet.
 print('Draw a circle on the paper sheet...')
+global finishtime
+count = 0
+startCount = False
+stopGetTime = False
+# draw line
+# arr_size = 80
+# x_arr = [0.01*i + 0.7 for i in range(arr_size)]
+# y_arr = [0.01*i - 1.35 for i in range(arr_size)]
+# z_arr = [0.01*i + 0.32 for i in range(arr_size)]
+# draw 2-d square
+arr_size = 160
+x_arr = [0.71 for i in range(arr_size/4)]
+x_arr.extend([0.02*i + 0.7 for i in range(arr_size/4)])
+x_arr.extend([1.5 for i in range(arr_size/4)])
+x_arr.extend([1.5 - 0.02*i  for i in range(arr_size/4)])
+y_arr = [0.02*i - 1.35 for i in range(arr_size/4)]
+y_arr.extend([-0.57 for i in range(arr_size/4)])
+y_arr.extend([-0.55 - 0.02*i  for i in range(arr_size/4)])
+y_arr.extend([-1.35 for i in range(arr_size/4)])
+z_arr = [0.34 for i in range(arr_size)]
+
 while supervisor.step(timeStep) != -1:
     t = supervisor.getTime()
 
     # Use the circle equation relatively to the arm base as an input of the IK algorithm.
-    x = 0.25 * math.cos(t) + 1.1
-    y = 0.25 * math.sin(t) - 0.95
-    z = 0.23
-    
+    # x = 0.25 * math.sin(t) + 1.1
+    # y = 0.25 * math.sin(t) - 0.95
+    # z = 0.32
+    x = x_arr[count]
+    y = y_arr[count]
+    z = z_arr[count]
+    if count  == arr_size-1:
+        count = 0
+        stopGetTime = True
+    if startCount:
+        count = count + 1
+    if not stopGetTime:
+        finishtime = supervisor.getTime()
     noise = np.random.normal(0, 0.01, 3)
     #Apply Noise
     # x += noise[0]
@@ -111,7 +143,7 @@ while supervisor.step(timeStep) != -1:
         [0, 0, 0, 1]
     ])
     values = trans_field.getSFVec3f()
-    print("ARM is at position: %g %g %g" % (values[0], values[1], values[2]))
+    # print("ARM is at position: %g %g %g" % (values[0], values[1], values[2]))
     # Actuate the 3 first arm motors with the IK results.
     for i in range(3):
         motors[i].setPosition(ikResults[i + 1])
@@ -121,12 +153,13 @@ while supervisor.step(timeStep) != -1:
     motors[5].setPosition(ikResults[1])
 
     # Conditions to start/stop drawing and leave this loop.
-    if supervisor.getTime() > 2 * math.pi + 1.5:
+    # if supervisor.getTime() > 2 * math.pi + 1.5:
+    if supervisor.getTime() > finishtime + 0.1:
         break
     elif supervisor.getTime() > 1.5:
         # Note: start to draw at 1.5 second to be sure the arm is well located.
         supervisor.getPen('pen').write(True)
-
+        startCount = True
 # Loop 2: Move the arm hand to the target.
 print('Move the yellow and black sphere to move the arm...')
 while supervisor.step(timeStep) != -1:
@@ -140,7 +173,7 @@ while supervisor.step(timeStep) != -1:
     y = - (targetPosition[2] - armPosition[2])
     z = targetPosition[1] - armPosition[1]
     values = trans_field.getSFVec3f()
-    print("ARM is at position: %g %g %g" % (values[0], values[1], values[2]))
+    # print("ARM is at position: %g %g %g" % (values[0], values[1], values[2]))
     # Call "ikpy" to compute the inverse kinematics of the arm.
     ikResults = armChain.inverse_kinematics([
         [1, 0, 0, x],
@@ -155,4 +188,4 @@ while supervisor.step(timeStep) != -1:
 
 while supervisor.step(TIME_STEP) != -1:
     values = trans_field.getSFVec3f()
-    print("ARM is at position: %g %g %g" % (values[0], values[1], values[2]))
+    # print("ARM is at position: %g %g %g" % (values[0], values[1], values[2]))
