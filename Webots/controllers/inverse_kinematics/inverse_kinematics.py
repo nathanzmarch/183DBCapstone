@@ -97,6 +97,8 @@ stopGetTime = False
 # 1 = square on paper
 # 2 = circle on paper
 # 3 = line on paper
+# 4 = arc on tube (inverse_kinematics_tube)
+# 5 = tattoo on table (inverse_kinematics_tattoo_2d)
 goal = 4
 noise = 0
 
@@ -127,12 +129,37 @@ if goal == 3:
     z_arr = [0.01*i + 0.32 for i in range(arr_size)]
     
 if goal == 4:
-    angles = np.arange(0, np.pi/2, 0.01)
-    arr_size = len(angles)
-    
-    x_arr = 0.64 + 0.5*np.sin(angles)
+    angles = np.arange(np.pi/6, 5*np.pi/6, 0.01)
+    x_arr = 1.2 + 0.5*np.cos(angles)
     y_arr = -1.03 + 0 * angles
-    z_arr = 0.08 + 0.5*np.sin(angles)
+    z_arr = 0.13 + 0.5*np.sin(angles)
+    
+    angles = np.arange(0, 0.5, 0.01)
+    y_arr2 = y_arr[-1] - angles
+    x_arr2 = x_arr[-1] + 0 * angles
+    z_arr2 = z_arr[-1] + 0 * angles
+    x_arr = np.concatenate((x_arr, x_arr2), 0)
+    y_arr = np.concatenate((y_arr, y_arr2), 0)
+    z_arr = np.concatenate((z_arr, z_arr2), 0)
+    
+    angles = np.arange(np.pi/6, 5*np.pi/6, 0.01)
+    angles = np.pi - angles;
+    x_arr2 = 1.2 + 0.5*np.cos(angles)
+    y_arr2 = -1.53 + 0 * angles
+    z_arr2 = 0.138 + 0.5*np.sin(angles)
+    x_arr = np.concatenate((x_arr, x_arr2), 0)
+    y_arr = np.concatenate((y_arr, y_arr2), 0)
+    z_arr = np.concatenate((z_arr, z_arr2), 0)
+    
+    angles = np.arange(0, 0.5, 0.01)
+    y_arr2 = y_arr[-1] + angles
+    x_arr2 = x_arr[-1] + 0 * angles
+    z_arr2 = z_arr[-1] + 0 * angles + 0.02
+    x_arr = np.concatenate((x_arr, x_arr2), 0)
+    y_arr = np.concatenate((y_arr, y_arr2), 0)
+    z_arr = np.concatenate((z_arr, z_arr2), 0)
+    
+    arr_size = len(x_arr)
 
 while supervisor.step(timeStep) != -1 and goal != 5:
     x = x_arr[count]
@@ -212,9 +239,9 @@ while supervisor.step(timeStep) != -1:
         motors[i].setPosition(ikResults[i + 1])
         
     # Report Position
-    # values = trans_field.getSFVec3f()
-    # print("ARM is at position: %g %g %g" % (x, y, z))
-
-while supervisor.step(TIME_STEP) != -1:
     values = trans_field.getSFVec3f()
-    # print("ARM is at position: %g %g %g" % (values[0], values[1], values[2]))
+    print("ARM is at position: %g %g %g" % (x, y, z))
+
+# while supervisor.step(TIME_STEP) != -1:
+    # values = trans_field.getSFVec3f()
+    print("ARM is at position: %g %g %g" % (values[0], values[1], values[2]))
