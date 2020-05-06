@@ -26,9 +26,18 @@ import math
 from controller import Supervisor, Camera, CameraRecognitionObject
 import numpy as np
 
+# HELPER FUNCTIONS
 def makeSquareArrays(x,y,z):
     z=[0.32 for i in range(160)]
+    
+def calculateDistance2D(x1,y1,x2,y2):  
+    dist = math.sqrt((x2 - x1)**2 + (y2 - y1)**2)  
+    return dist  
 
+def calculateDistance3D(x1,y1,x2,y2):  
+    dist = math.sqrt((x2 - x1)**2 + (y2 - y1)**2)  
+    return dist  
+    
 # Create the arm chain.
 # The constants below have been manually extracted from the Irb4600-40.proto file, looking at the HingeJoint node fields.
 # The chain should contain the "E motor" bone, because this bone defines the hand position.
@@ -94,14 +103,16 @@ count = 0
 startCount = False
 stopGetTime = False
 
+# 0 = No drawing
 # 1 = square on paper
 # 2 = circle on paper
 # 3 = line on paper
 # 4 = arc on tube (inverse_kinematics_tube)
 # 5 = tattoo on table (inverse_kinematics_tattoo_2d)
-goal = 4
+goal = 5
 noise = 0
 
+# Coordinates for a square on paper
 if goal == 1:
     arr_size = 160
     x_arr = [0.71 for i in range(arr_size/4)]
@@ -114,6 +125,7 @@ if goal == 1:
     y_arr.extend([-1.35 for i in range(arr_size/4)])
     z_arr = [0.34 for i in range(arr_size)]
 
+# Coordinates for a circle on paper
 if goal == 2:
     angles = np.arange(0, 6.28, 0.01)
     arr_size = len(angles)
@@ -122,17 +134,19 @@ if goal == 2:
     y_arr = 0.25 * np.cos(angles) - 0.95
     z_arr = 0.31 + 0 * angles
 
+# Coordinates for a line on inclined plane
 if goal == 3:
     arr_size = 80
     x_arr = [0.01*i + 0.7 for i in range(arr_size)]
     y_arr = [0.01*i - 1.35 for i in range(arr_size)]
     z_arr = [0.01*i + 0.32 for i in range(arr_size)]
-    
+
+# Coordinates for an arc on a tube (load tube world)
 if goal == 4:
     angles = np.arange(np.pi/6, 5*np.pi/6, 0.01)
-    x_arr = 1.2 + 0.5*np.cos(angles)
-    y_arr = -1.03 + 0 * angles
-    z_arr = 0.13 + 0.5*np.sin(angles)
+    x_arr = 0.5*np.cos(angles) + 1.2
+    y_arr = 0 * angles - 1.03
+    z_arr = 0.5*np.sin(angles) + 0.13 # Adjust offset as necessary
     
     angles = np.arange(0, 0.5, 0.01)
     y_arr2 = y_arr[-1] - angles
@@ -144,9 +158,9 @@ if goal == 4:
     
     angles = np.arange(np.pi/6, 5*np.pi/6, 0.01)
     angles = np.pi - angles;
-    x_arr2 = 1.2 + 0.5*np.cos(angles)
-    y_arr2 = -1.53 + 0 * angles
-    z_arr2 = 0.138 + 0.5*np.sin(angles)
+    x_arr2 = 0.5*np.cos(angles) + 1.2
+    y_arr2 = 0 * angles - 1.53
+    z_arr2 = 0.5*np.sin(angles) + 0.138 # Adjust offset as necessary
     x_arr = np.concatenate((x_arr, x_arr2), 0)
     y_arr = np.concatenate((y_arr, y_arr2), 0)
     z_arr = np.concatenate((z_arr, z_arr2), 0)
@@ -161,7 +175,53 @@ if goal == 4:
     
     arr_size = len(x_arr)
 
-while supervisor.step(timeStep) != -1 and goal != 5:
+# Coordinates for an arc on a tube (load 2D tattoo world)
+if goal == 5:
+    tattoo = np.loadtxt("flatTattoo.txt")
+    tattoo_x = tattoo[:, 0]
+    tattoo_z = tattoo[:, 1]
+    tattoo_y = tattoo[:, 2]
+    
+    # ONLY FOR FLAT SURFACE
+    tattoo_z = tattoo_z * 0 + 0.34
+    
+    # PARAMETERS
+    margin = 1     # Must find this by plotting the frequency of point-to-point distances
+    height = 0.34  # Adjust as necessary
+    z_lift = 1     # How much to lift up after finishing a stroke
+    
+    # Loops through all points, and adds commands to terminate and start new strokes 
+    # when it detects a new stroke is about to begin using point distance. 
+    x_arr_list = [tattoo_x[0]]
+    y_arr_list = [tattoo_y[0]]
+    z_arr_list = [tattoo_z[0]]
+    for i in range(0, len(tattoo_x)):
+        x = tattoo_x[i]
+        y = tattoo_y[i]
+        z = tattoo_z[i]
+        
+        x0 = x_arr_list[-1]
+        y0 = y_arr_list[-1]
+        z0 = z_arr_list[-1]
+        
+        # Add a jump command if the new point is far away from the old point
+        if calculateDistance(x0, y0, x, y) > margin:
+            x_arr_list.extend([ x0, x , x])
+            y_arr_list.extend([ x0, y , y])
+            x_arr_list.extend([ z0 + z_lift, z0 + z_lift, z)
+        else:
+            x_arr_list.append(x)
+            y_arr_list.append(y)
+            z_arr_list.append(z)
+            z_arr_list.append(z)
+    
+    # Convert lists to np arrays (lists were used as it is more efficient to modify lists)
+    x_arr = np.array(x_arr_list)
+    y_arr = np.array(y_arr_list)       
+    z_arr = np.array(z_arr_list)       
+    
+# Begin Drawing
+while supervisor.step(timeStep) != -1 and goal > 0:
     x = x_arr[count]
     y = y_arr[count]
     z = z_arr[count]
