@@ -146,7 +146,7 @@ if goal == 4:
     angles = np.arange(np.pi/6, 5*np.pi/6, 0.01)
     x_arr = 0.5*np.cos(angles) + 1.2
     y_arr = 0 * angles - 1.03
-    z_arr = 0.5*np.sin(angles) + 0.13 # Adjust offset as necessary
+    z_arr = 0.5*np.sin(angles) + 0.138 # Adjust offset as necessary
     
     angles = np.arange(0, 0.5, 0.01)
     y_arr2 = y_arr[-1] - angles
@@ -175,20 +175,22 @@ if goal == 4:
     
     arr_size = len(x_arr)
 
-# Coordinates for an arc on a tube (load 2D tattoo world)
+# Coordinates for a tattoo (load 2D tattoo world)
 if goal == 5:
+    scale_ratio = 0.106282
+    shifts = [1.005392, 0.192004, 0]
     tattoo = np.loadtxt("flatTattoo.txt")
-    tattoo_x = tattoo[:, 0]
-    tattoo_z = tattoo[:, 1]
-    tattoo_y = tattoo[:, 2]
-    
-    # ONLY FOR FLAT SURFACE
-    tattoo_z = tattoo_z * 0 + 0.34
+    tattoo_x = tattoo[:, 0] * scale_ratio + shifts[0]
+    tattoo_y = tattoo[:, 2] * scale_ratio + shifts[1]
+    tattoo_z = tattoo[:, 1] * scale_ratio + shifts[2]
     
     # PARAMETERS
-    margin = 1     # Must find this by plotting the frequency of point-to-point distances
-    height = 0.34  # Adjust as necessary
-    z_lift = 1     # How much to lift up after finishing a stroke
+    margin = 0.1     # Must find this by plotting the frequency of point-to-point distances
+    z_lift = 1       # How much to lift up after finishing a stroke
+    
+    # ONLY FOR FLAT SURFACE
+    height = 0.39  # Adjust as necessary
+    tattoo_z = tattoo_z * 0 + height
     
     # Loops through all points, and adds commands to terminate and start new strokes 
     # when it detects a new stroke is about to begin using point distance. 
@@ -205,20 +207,21 @@ if goal == 5:
         z0 = z_arr_list[-1]
         
         # Add a jump command if the new point is far away from the old point
-        if calculateDistance(x0, y0, x, y) > margin:
-            x_arr_list.extend([ x0, x , x])
-            y_arr_list.extend([ x0, y , y])
-            x_arr_list.extend([ z0 + z_lift, z0 + z_lift, z)
+        if calculateDistance2D(x0, y0, x, y) > margin:
+            x_arr_list.extend([ x0, x , x ])
+            y_arr_list.extend([ x0, y , y ])
+            z_arr_list.extend([ z0 + z_lift, z0 + z_lift, z ])
         else:
             x_arr_list.append(x)
             y_arr_list.append(y)
-            z_arr_list.append(z)
             z_arr_list.append(z)
     
     # Convert lists to np arrays (lists were used as it is more efficient to modify lists)
     x_arr = np.array(x_arr_list)
     y_arr = np.array(y_arr_list)       
-    z_arr = np.array(z_arr_list)       
+    z_arr = np.array(z_arr_list)
+
+    arr_size = len(x_arr)
     
 # Begin Drawing
 while supervisor.step(timeStep) != -1 and goal > 0:

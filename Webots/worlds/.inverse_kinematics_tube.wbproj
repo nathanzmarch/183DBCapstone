@@ -8,6 +8,6 @@ selectionDisabled: 0
 viewpointLocked: 0
 orthographicViewHeight: 1
 textFiles: 0 "controllers/inverse_kinematics/inverse_kinematics.py" "controllers/objRecController/objRecController.c"
-renderingDevicePerspectives: CameraBot:camera;0;1;0;0
-renderingDevicePerspectives: CameraBot2:camera;0;1;0;0
 renderingDevicePerspectives: robot:cam1;1;1;0;0
+renderingDevicePerspectives: CameraBot2:camera;0;1;0;0
+renderingDevicePerspectives: CameraBot:camera;0;1;0;0
