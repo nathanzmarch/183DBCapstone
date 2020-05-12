@@ -96,21 +96,21 @@ count = 0
 startCount = False
 stopGetTime = False
 # draw line
-# arr_size = 80
-# x_arr = [0.01*i + 0.7 for i in range(arr_size)]
-# y_arr = [0.01*i - 1.35 for i in range(arr_size)]
-# z_arr = [0.01*i + 0.32 for i in range(arr_size)]
+arr_size = 80
+x_arr = [0.01*i + 0.7 for i in range(arr_size)]
+y_arr = [0.01*i - 1.35 for i in range(arr_size)]
+z_arr = [0.0092*i + 0.32 for i in range(arr_size)]
 # draw 2-d square
-arr_size = 160
-x_arr = [0.71 for i in range(arr_size/4)]
-x_arr.extend([0.02*i + 0.7 for i in range(arr_size/4)])
-x_arr.extend([1.5 for i in range(arr_size/4)])
-x_arr.extend([1.5 - 0.02*i  for i in range(arr_size/4)])
-y_arr = [0.02*i - 1.35 for i in range(arr_size/4)]
-y_arr.extend([-0.57 for i in range(arr_size/4)])
-y_arr.extend([-0.55 - 0.02*i  for i in range(arr_size/4)])
-y_arr.extend([-1.35 for i in range(arr_size/4)])
-z_arr = [0.34 for i in range(arr_size)]
+# arr_size = 160
+# x_arr = [0.71 for i in range(arr_size/4)]
+# x_arr.extend([0.02*i + 0.7 for i in range(arr_size/4)])
+# x_arr.extend([1.5 for i in range(arr_size/4)])
+# x_arr.extend([1.5 - 0.02*i  for i in range(arr_size/4)])
+# y_arr = [0.02*i - 1.35 for i in range(arr_size/4)]
+# y_arr.extend([-0.57 for i in range(arr_size/4)])
+# y_arr.extend([-0.55 - 0.02*i  for i in range(arr_size/4)])
+# y_arr.extend([-1.35 for i in range(arr_size/4)])
+# z_arr = [0.34 for i in range(arr_size)]
 
 while supervisor.step(timeStep) != -1:
     t = supervisor.getTime()

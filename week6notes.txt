@@ -1,0 +1,16 @@
+image processing not that worth it
+
+we need to focus on the main issue of projection and arm planning so that it doesn't go through the person
+
+we don't know about the color, angle of the pen? 
+
+don't want to worry about color right now.
+
+making sure that the tip doesn't go through the surface
+
+make sure the pen is perpendicular to the surface while drawing
+
+metric to characterize how effectively we solved the problem.
+
+not a successful path plan because not perpendicular?
+
