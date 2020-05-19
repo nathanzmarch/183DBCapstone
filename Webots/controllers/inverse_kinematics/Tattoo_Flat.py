@@ -211,17 +211,12 @@ if goal == 5:
         # Add a jump command if the new point is far away from the old point
         if calculateDistance2D(x0, y0, x, y) > margin:
             x_arr_list.extend([ x0, x , x ])
-            y_arr_list.extend([ y0, y , y ])
+            y_arr_list.extend([ x0, y , y ])
             z_arr_list.extend([ z0 + z_lift, z0 + z_lift, z ])
         else:
             x_arr_list.append(x)
             y_arr_list.append(y)
             z_arr_list.append(z)
-            
-    # Avoids collision
-    x_arr_list.append(x)
-    y_arr_list.append(y)
-    z_arr_list.append(z + 2)
     
     # Convert lists to np arrays (lists were used as it is more efficient to modify lists)
     x_arr = np.array(x_arr_list)
@@ -230,32 +225,30 @@ if goal == 5:
 
     arr_size = len(x_arr)
     
-goal = 9
-if goal >= 6:
+goal = 7
+if goal == 6 or goal == 7 or goal == 8:
     if goal == 6:
-        tattoo = np.loadtxt("Line_Curved.txt")
-        decimation = 16
-    elif goal == 7:
-        tattoo = np.loadtxt("Line_Straight.txt")
-        decimation = 16
-    elif goal == 8:
-        tattoo = np.loadtxt("Circle_Curved.txt")
-        decimation = 40
-    elif goal == 9:
-        tattoo = np.loadtxt("Tattoo_Curved.txt")
-        decimation = 16;
+        tattoo_1 = np.loadtxt("CurvedLine.txt")
+        tattoo_2 = np.loadtxt("StraightLine.txt")
+        tattoo = np.concatenate((tattoo_1, tattoo_2))
+        decimation = 8
+    if goal == 7:
+        tattoo = np.loadtxt("CircleFine.txt")
+        decimation = 20
+    if goal == 8:
+        tattoo = np.loadtxt("CurvedTattoo.txt")
         
     tattoo = tattoo[1::decimation]
     
     scale_ratio = 1
-    shifts = [0, 0, 0.04]
+    shifts = [0, 0, 0.02]
     tattoo_x = tattoo[:, 0] * scale_ratio + shifts[0]
     tattoo_y = tattoo[:, 2] * scale_ratio + shifts[1]
     tattoo_z = tattoo[:, 1] * scale_ratio + shifts[2]
     
     # PARAMETERS
     margin = 0.1     # Must find this by plotting the frequency of point-to-point distances
-    z_lift = 1.5       # How much to lift up after finishing a stroke
+    z_lift = 1       # How much to lift up after finishing a stroke
     
     # ONLY FOR FLAT SURFACE
     #height = 0.39  # Adjust as necessary
@@ -278,17 +271,12 @@ if goal >= 6:
         # Add a jump command if the new point is far away from the old point
         if calculateDistance2D(x0, y0, x, y) > margin:
             x_arr_list.extend([ x0, x , x ])
-            y_arr_list.extend([ y0, y , y ])
+            y_arr_list.extend([ x0, y , y ])
             z_arr_list.extend([ z0 + z_lift, z0 + z_lift, z ])
         else:
             x_arr_list.append(x)
             y_arr_list.append(y)
             z_arr_list.append(z)
-            
-    # Avoids collision
-    x_arr_list.append(tattoo_x[-1])
-    y_arr_list.append(tattoo_y[-1])
-    z_arr_list.append(tattoo_z[-1] + 1)
     
     # Convert lists to np arrays (lists were used as it is more efficient to modify lists)
     x_arr = np.array(x_arr_list)
