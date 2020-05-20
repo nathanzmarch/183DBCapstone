@@ -267,6 +267,8 @@ if goal >= 6:
     y_arr_list = [tattoo_y[0]]
     z_arr_list = [tattoo_z[0]]
     for i in range(0, len(tattoo_x)):
+    
+        
         x = tattoo_x[i]
         y = tattoo_y[i]
         z = tattoo_z[i]
@@ -299,6 +301,41 @@ if goal >= 6:
     
 # Begin Drawing
 while supervisor.step(timeStep) != -1 and goal > 0:
+
+
+    # TODO: Logic for staying PERPENDICULAR to canvas
+    a, b, c = 0, 0, 0
+    if count < 3:
+        p1 = np.array([x_arr[count], y_arr[count], z_arr[count]])
+        p2 = np.array([x_arr[count+1], y_arr[count+1], z_arr[count+1]])
+        p3 = np.array([x_arr[count+2], y_arr[count+2], z_arr[count+3]])
+    
+    if count >= 3:
+        p1x, p1y, p1z = x_arr[count], y_arr[count], z_arr[count]
+        p2x, p2y, p2z = x_arr[count-1], y_arr[count-1], z_arr[count-1]
+        p3x, p3y, p3z = x_arr[count-2], y_arr[count-2], z_arr[count-3]
+        
+        p1 = np.array([p1x, p1y, p1z])
+        p2 = np.array([p2x, p2y, p2z])
+        p3 = np.array([p3x, p3y, p3z])
+        
+    # These two vectors are in the plane
+    v1 = p3 - p1
+    v2 = p2 - p1
+        
+    # the cross product is a vector normal to the plane
+    cp = np.cross(v1, v2)
+    a, b, c = cp
+        
+    # This evaluates a * x3 + b * y3 + c * z3 which equals d
+    d = np.dot(cp, p3)
+        
+    normal_vector = [a, b, c]
+    # only need d for shift
+    # print('The plane equation is {0}x + {1}y + {2}z = {3}'.format(a, b, c, d))
+       
+    ## TODO: done w. new segment
+
     x = x_arr[count]
     y = y_arr[count]
     z = z_arr[count]
@@ -333,12 +370,28 @@ while supervisor.step(timeStep) != -1 and goal > 0:
         motors[i].setPosition(ikResults[i + 1])
     
     # Keep the hand orientation down and perpendicular
-    motors[4].setPosition(-ikResults[2] - ikResults[3] + math.pi / 2)
-    motors[5].setPosition(ikResults[1])
+    # motors[4].setPosition(-ikResults[2] - ikResults[3] + math.pi / 2)
+    # motors[5].setPosition(ikResults[1])
+    
+    # TODO: New # Keep the hand orientation down and perpendicular
+    normal_vector = [a, b, c]
+    # Call "ikpy" to compute the inverse kinematics of the plane.
+    ikNormal = armChain.inverse_kinematics([
+        [1, 0, 0, a],
+        [0, 1, 0, b],
+        [0, 0, 1, c],
+        [0, 0, 0, 1]
+    ])
+    print("ikResults[1] ARE: ", ikResults)
+    # NEW: keep hand position perpendicular to the canvas
+    # Keep the hand orientation down and perpendicular
+    motors[4].setPosition(-ikNormal[2] - ikNormal[3] + math.pi / 2)
+    motors[5].setPosition(ikNormal[1])
+    # TODO: end of new segment
     
     # Report Position
     values = trans_field.getSFVec3f()
-    print("ARM is at position: %g %g %g" % (x, y, z))
+    print("ARM drawing is at position: %g %g %g" % (x, y, z))
 
     # Conditions to start/stop drawing and leave this loop.
     # if supervisor.getTime() > 2 * math.pi + 1.5:
