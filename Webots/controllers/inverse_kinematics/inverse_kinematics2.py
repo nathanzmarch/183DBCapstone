@@ -25,7 +25,6 @@ except ImportError:
 import math
 from controller import Supervisor, Camera, CameraRecognitionObject
 import numpy as np
-import re
 
 # HELPER FUNCTIONS
 def makeSquareArrays(x,y,z):
@@ -39,9 +38,6 @@ def calculateDistance3D(x1,y1,x2,y2):
     dist = math.sqrt((x2 - x1)**2 + (y2 - y1)**2)  
     return dist  
     
-def calculateDist3D(x1,y1,z1,x2,y2,z2):  
-    dist = math.sqrt((x2 - x1)**2 + (y2 - y1)**2 + (z2-z1)**2)  
-    return dist  
 # Create the arm chain.
 # The constants below have been manually extracted from the Irb4600-40.proto file, looking at the HingeJoint node fields.
 # The chain should contain the "E motor" bone, because this bone defines the hand position.
@@ -82,7 +78,7 @@ armChain = Chain(name='arm', links=[
         orientation=[0, 0, 0],
         rotation=[0, 1, 0]
     )
-], active_links_mask=[False, True,True,True,True,True])
+])
 
 # Initialize the Webots Supervisor.
 supervisor = Supervisor()
@@ -107,62 +103,6 @@ count = 0
 startCount = False
 stopGetTime = False
 
-#parse obj
-reComp = re.compile("(?<=^)(v |vn |vt |f )(.*)(?=$)", re.MULTILINE)
-with open("Cylinder_Before_shift.obj") as f:
-    data = [txt.group() for txt in reComp.finditer(f.read())]
-
-v_arr, vn_arr, vt_arr, f_arr = [], [], [], []
-verts = []
-indices = []
-hashindices = {}
-vertices, normals = [], []
-actnormals = []
-index = 0
-for line in data:
-    tokens = line.split(' ')
-    if tokens[0] == 'v':
-        for c in tokens[1:]:
-            v_arr.append(float(c))
-    elif tokens[0] == 'vn':
-        for c in tokens[1:]:
-            vn_arr.append(float(c))
-    elif tokens[0] == 'vt':
-        for c in tokens[1:]:
-            vt_arr.append(float(c))
-    elif tokens[0] == 'f':
-        f_arr.append([[int(i) if len(i) else 0 for i in c.split('/')] for c in tokens[1:]])
-        quad = False
-        for j in range(1,len(tokens)):
-            if(j == 4 and not quad):
-                j = 3
-                quad = True
-            if(tokens[j] in hashindices):
-                indices.append(hashindices[tokens[j]])
-            else:
-                vertex = tokens[j].split('/')
-                verts.append(v_arr[(int(vertex[0]) - 1) * 3 + 0])
-                verts.append(v_arr[(int(vertex[0]) - 1) * 3 + 1])
-                verts.append(v_arr[(int(vertex[0]) - 1) * 3 + 2])
-                if(len(vt_arr)):
-                    vt_arr.append(vt_arr[( (int(vertex[1]) - 1) or int(vertex[0])) * 2 + 0])
-                    vt_arr.append(vt_arr[( (int(vertex[1]) - 1) or int(vertex[0])) * 2 + 1])
-                normals.append(vn_arr[( (int(vertex[2]) - 1) or int(vertex[0])) * 3 + 0])
-                normals.append(vn_arr[( (int(vertex[2]) - 1) or int(vertex[0])) * 3 + 1])
-                normals.append(vn_arr[( (int(vertex[2]) - 1) or int(vertex[0])) * 3 + 2])
-
-                hashindices[tokens[j]] = index
-                indices.append(index)
-                index += 1
-            if(j == 4 and quad):
-                indices.append(hashindices[tokens[0]])
-
-for j in range(len(verts)/3):
-    vertices.append([verts[3*j+0],verts[3*j+1],verts[3*j+2] ])
-for j in range(len(normals)/3):
-    actnormals.append([normals[3*j+0],normals[3*j+1],normals[3*j+2]])
-print("vert len: ", len(vertices))
-print("norm len: ", len(actnormals))
 # 0 = No drawing
 # 1 = square on paper
 # 2 = circle on paper
@@ -171,7 +111,7 @@ print("norm len: ", len(actnormals))
 # 5 = tattoo on table (inverse_kinematics_tattoo_2d)
 # 6 = Cross on cylinder
 # 7 = Circle on cylinder
-goal = -1
+goal = 7
 noise = 0
 
 # Coordinates for a square on paper
@@ -290,7 +230,7 @@ if goal == 5:
 
     arr_size = len(x_arr)
     
-goal = 8
+goal = 9
 if goal >= 6:
     if goal == 6:
         tattoo = np.loadtxt("Line_Curved.txt")
@@ -358,41 +298,39 @@ if goal >= 6:
     z_arr = np.array(z_arr_list)
 
     arr_size = len(x_arr)
-
-
-dist = []
+    
 # Begin Drawing
 while supervisor.step(timeStep) != -1 and goal > 0:
 
 
     # TODO: Logic for staying PERPENDICULAR to canvas
-    # a, b, c = 0, 0, 0
-    # if count < 3:
-        # p1 = np.array([x_arr[count], y_arr[count], z_arr[count]])
-        # p2 = np.array([x_arr[count+1], y_arr[count+1], z_arr[count+1]])
-        # p3 = np.array([x_arr[count+2], y_arr[count+2], z_arr[count+3]])
+    a, b, c = 0, 0, 0
+    if count < 3:
+        p1 = np.array([x_arr[count], y_arr[count], z_arr[count]])
+        p2 = np.array([x_arr[count+1], y_arr[count+1], z_arr[count+1]])
+        p3 = np.array([x_arr[count+2], y_arr[count+2], z_arr[count+3]])
     
-    # if count >= 3:
-        # p1x, p1y, p1z = x_arr[count], y_arr[count], z_arr[count]
-        # p2x, p2y, p2z = x_arr[count-1], y_arr[count-1], z_arr[count-1]
-        # p3x, p3y, p3z = x_arr[count-2], y_arr[count-2], z_arr[count-3]
+    if count >= 3:
+        p1x, p1y, p1z = x_arr[count], y_arr[count], z_arr[count]
+        p2x, p2y, p2z = x_arr[count-1], y_arr[count-1], z_arr[count-1]
+        p3x, p3y, p3z = x_arr[count-2], y_arr[count-2], z_arr[count-3]
         
-        # p1 = np.array([p1x, p1y, p1z])
-        # p2 = np.array([p2x, p2y, p2z])
-        # p3 = np.array([p3x, p3y, p3z])
+        p1 = np.array([p1x, p1y, p1z])
+        p2 = np.array([p2x, p2y, p2z])
+        p3 = np.array([p3x, p3y, p3z])
         
     # These two vectors are in the plane
-    # v1 = p3 - p1
-    # v2 = p2 - p1
+    v1 = p3 - p1
+    v2 = p2 - p1
         
     # the cross product is a vector normal to the plane
-    # cp = np.cross(v1, v2)
-    # a, b, c = cp
+    cp = np.cross(v1, v2)
+    a, b, c = cp
         
     # This evaluates a * x3 + b * y3 + c * z3 which equals d
-    # d = np.dot(cp, p3)
+    d = np.dot(cp, p3)
         
-    # normal_vector = [a, b, c]
+    normal_vector = [a, b, c]
     # only need d for shift
     # print('The plane equation is {0}x + {1}y + {2}z = {3}'.format(a, b, c, d))
        
@@ -416,9 +354,9 @@ while supervisor.step(timeStep) != -1 and goal > 0:
         y += noise[1]
         z += noise[2]
 
-    # print(x)
-    # print(y)
-    # print(z)
+    print(x)
+    print(y)
+    print(z)
     # Call "ikpy" to compute the inverse kinematics of the arm.
     ikResults = armChain.inverse_kinematics([
         [1, 0, 0, x],
@@ -426,59 +364,34 @@ while supervisor.step(timeStep) != -1 and goal > 0:
         [0, 0, 1, z],
         [0, 0, 0, 1]
     ])
-    ikResults2 = armChain.inverse_kinematics([
-        [1, 1, 1, x],
-        [1, 1, 1, y],
-        [1, 1, 1, z],
-        [0, 0, 0, 1]
-    ])
-    print(ikResults)
-    print(ikResults2)
+    
     # Actuate the 3 first arm motors with the IK results.
     for i in range(3):
         motors[i].setPosition(ikResults[i + 1])
     
-    min = 50
-    index = 0
-    for i in range(len(vertices)):
-        temp = calculateDist3D(vertices[i][0],vertices[i][1],vertices[i][2],x,z,y)
-        if ( temp < min):
-            min = temp
-            index = i
-        if i == len(vertices) - 1:
-            dist.append(min)
-    normal = actnormals[index]
-    theta = np.arccos(normal[2])
-    print("index:", index)
-    print("vertex:", vertices[index])
-    print("Normal:", actnormals[index])
-    print("theta:", theta);
-    print("dist", min)
     # Keep the hand orientation down and perpendicular
     # motors[4].setPosition(-ikResults[2] - ikResults[3] + math.pi / 2)
     # motors[5].setPosition(ikResults[1])
     
     # TODO: New # Keep the hand orientation down and perpendicular
-    # normal_vector = [a, b, c]
+    normal_vector = [a, b, c]
     # Call "ikpy" to compute the inverse kinematics of the plane.
-    # ikNormal = armChain.inverse_kinematics([
-        # [1, 0, 0, a],
-        # [0, 1, 0, b],
-        # [0, 0, 1, c],
-        # [0, 0, 0, 1]
-    # ])
-    # print("ikResults[1] ARE: ", ikResults)
+    ikNormal = armChain.inverse_kinematics([
+        [1, 0, 0, a],
+        [0, 1, 0, b],
+        [0, 0, 1, c],
+        [0, 0, 0, 1]
+    ])
+    print("ikResults[1] ARE: ", ikResults)
     # NEW: keep hand position perpendicular to the canvas
     # Keep the hand orientation down and perpendicular
-    # makeBigChange = 100 * (theta - math.pi/2)
-    # print("theta change", makeBigChange)
-    motors[4].setPosition(-ikResults[2] - ikResults[3] + theta) 
-    motors[5].setPosition(-ikResults[1])
+    motors[4].setPosition(-ikNormal[2] - ikNormal[3] + math.pi / 2)
+    motors[5].setPosition(ikNormal[1])
     # TODO: end of new segment
     
     # Report Position
     values = trans_field.getSFVec3f()
-    print("ARM drawing is at position: %g %g %g" % (x, z, y))
+    print("ARM drawing is at position: %g %g %g" % (x, y, z))
 
     # Conditions to start/stop drawing and leave this loop.
     # if supervisor.getTime() > 2 * math.pi + 1.5:
@@ -489,17 +402,6 @@ while supervisor.step(timeStep) != -1 and goal > 0:
         supervisor.getPen('pen').write(True)
         startCount = True
         
-# printDists = ""
-# for i in range (len(dist)):
-    # printDists += str(dist[i]) + ","
-
-print(dist)
-sum = 0
-for i in range(len(dist)):
-    sum += dist[i]
-average = sum / len(dist)
-print("average", average)
-    
 # Loop 2: Move the arm hand to the target.
 print('Move the yellow and black sphere to move the arm...')
 while supervisor.step(timeStep) != -1:
@@ -509,7 +411,6 @@ while supervisor.step(timeStep) != -1:
 
     # Compute the position of the target relatively to the arm.
     # x and y axis are inverted because the arm is not aligned with the Webots global axes.
-    print("Arm position:", armPosition)
     x = targetPosition[0] - armPosition[0]
     y = - (targetPosition[2] - armPosition[2])
     z = targetPosition[1] - armPosition[1]

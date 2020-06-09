@@ -1,0 +1,50 @@
+the end to end result
+characterize each step independently
+make a claim that we need x vertices in a surface?
+Where did this number come from?
+What does smoothness mean?
+min angle? -> min distance?
+how have you solved that problem?
+-> supporting the claim with quantitative data
+how to characterize, validate
+numbers too big -> right sig figs
+place the numbers in context
+basically use number to support claim
+
+given the graph what is it supporting?
+
+Need to support our claims with data ->
+what conclusion can be drawn from data 
+
+comprehensiveness -> generate support for claims that you make
+figure out how to address this -> run more experiments, fix bugs
+characterize how you present the system to make sure that everything aligns
+
+what did you learn from the attempt -> this is not achievable in another tool
+
+if there is engineering value gained from getting to that point 
+
+how did i get hear conceptually
+
+we did this -> lets go
+
+integration question how to integrate blender in webots
+if it took your engineering expertise to solve
+
+what is it that the reader wants to get from you
+what are they going to get out of it
+
+characterization we need to do
+
+formalize the subdivision complexity
+
+instead of drawing the tattoo -> draw squares
+if we draw it on the arm
+
+heres what people care about
+heres math to give them what they want
+
+resolution
+uniformity
+linearity
+
