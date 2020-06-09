@@ -69,6 +69,9 @@ int main(int argc, char **argv) {
 
     if (force_value > -0.01) {
       // printf("Detecting a collision of %g N\n", force_value);
+      char s[50] = {0};
+      sprintf(s, "%f", force_value);
+      wb_robot_set_custom_data(s);
       // movement_counter = 15;
     }
     /*

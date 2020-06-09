@@ -1,0 +1,25 @@
+#VRML_OBJ R2020a utf8
+DEF FORCE Robot {
+  children [
+    TouchSensor {
+      translation -5.326955765383445e-09 -5.6868294073808556e-08 1.324162586247013e-07
+      rotation -0.5939903960322872 0.8042356634378949 -0.019504027174304113 3.066713603151775e-13
+      name "force"
+      boundingObject Box {
+        size 0.01 0.01 0.1
+      }
+      physics Physics {
+      }
+      type "force"
+      linearVelocity 0.0003207666326639092 -1.967101962761289e-06 -0.0003557834329970446
+      angularVelocity 0.0003057735237986601 -2.7133977383422825e-05 0.0002759624919684914
+    }
+  ]
+  boundingObject Box {
+    size 0.01 0.01 0.1
+  }
+  physics Physics {
+  }
+  controller "force"
+  customData "0.000000"
+}

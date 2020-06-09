@@ -23,7 +23,7 @@ except ImportError:
              'To run this sample, please upgrade "pip" and install ikpy with this command: "pip install ikpy"')
 
 import math
-from controller import Supervisor, Camera, CameraRecognitionObject
+from controller import Supervisor, Camera, CameraRecognitionObject, Node
 import numpy as np
 import re
 
@@ -99,7 +99,8 @@ for motorName in ['A motor', 'B motor', 'C motor', 'D motor', 'E motor', 'F moto
 target = supervisor.getFromDef('TARGET')
 arm = supervisor.getFromDef('ARM')
 trans_field = arm.getField("translation")
-
+force_node = supervisor.getFromDef('FORCE')
+print(force_node.getField("customData"))
 # cam1 = supervisor.getCamera("cam1")
 # cam1.enable()
 global finishtime
@@ -109,6 +110,7 @@ stopGetTime = False
 
 #parse obj
 reComp = re.compile("(?<=^)(v |vn |vt |f )(.*)(?=$)", re.MULTILINE)
+# CHANGE THIS OBJ FILE IF IMPORTING NEW OBJ
 with open("Cylinder_Before_shift.obj") as f:
     data = [txt.group() for txt in reComp.finditer(f.read())]
 
@@ -161,6 +163,8 @@ for j in range(len(verts)/3):
     vertices.append([verts[3*j+0],verts[3*j+1],verts[3*j+2] ])
 for j in range(len(normals)/3):
     actnormals.append([normals[3*j+0],normals[3*j+1],normals[3*j+2]])
+    
+#Verify that these are equal to guarantee correct parsing
 print("vert len: ", len(vertices))
 print("norm len: ", len(actnormals))
 # 0 = No drawing
@@ -171,7 +175,7 @@ print("norm len: ", len(actnormals))
 # 5 = tattoo on table (inverse_kinematics_tattoo_2d)
 # 6 = Cross on cylinder
 # 7 = Circle on cylinder
-goal = -1
+goal = 9
 noise = 0
 
 # Coordinates for a square on paper
@@ -290,7 +294,6 @@ if goal == 5:
 
     arr_size = len(x_arr)
     
-goal = 8
 if goal >= 6:
     if goal == 6:
         tattoo = np.loadtxt("Line_Curved.txt")
@@ -364,40 +367,6 @@ dist = []
 # Begin Drawing
 while supervisor.step(timeStep) != -1 and goal > 0:
 
-
-    # TODO: Logic for staying PERPENDICULAR to canvas
-    # a, b, c = 0, 0, 0
-    # if count < 3:
-        # p1 = np.array([x_arr[count], y_arr[count], z_arr[count]])
-        # p2 = np.array([x_arr[count+1], y_arr[count+1], z_arr[count+1]])
-        # p3 = np.array([x_arr[count+2], y_arr[count+2], z_arr[count+3]])
-    
-    # if count >= 3:
-        # p1x, p1y, p1z = x_arr[count], y_arr[count], z_arr[count]
-        # p2x, p2y, p2z = x_arr[count-1], y_arr[count-1], z_arr[count-1]
-        # p3x, p3y, p3z = x_arr[count-2], y_arr[count-2], z_arr[count-3]
-        
-        # p1 = np.array([p1x, p1y, p1z])
-        # p2 = np.array([p2x, p2y, p2z])
-        # p3 = np.array([p3x, p3y, p3z])
-        
-    # These two vectors are in the plane
-    # v1 = p3 - p1
-    # v2 = p2 - p1
-        
-    # the cross product is a vector normal to the plane
-    # cp = np.cross(v1, v2)
-    # a, b, c = cp
-        
-    # This evaluates a * x3 + b * y3 + c * z3 which equals d
-    # d = np.dot(cp, p3)
-        
-    # normal_vector = [a, b, c]
-    # only need d for shift
-    # print('The plane equation is {0}x + {1}y + {2}z = {3}'.format(a, b, c, d))
-       
-    ## TODO: done w. new segment
-
     x = x_arr[count]
     y = y_arr[count]
     z = z_arr[count]
@@ -416,9 +385,6 @@ while supervisor.step(timeStep) != -1 and goal > 0:
         y += noise[1]
         z += noise[2]
 
-    # print(x)
-    # print(y)
-    # print(z)
     # Call "ikpy" to compute the inverse kinematics of the arm.
     ikResults = armChain.inverse_kinematics([
         [1, 0, 0, x],
@@ -426,14 +392,6 @@ while supervisor.step(timeStep) != -1 and goal > 0:
         [0, 0, 1, z],
         [0, 0, 0, 1]
     ])
-    ikResults2 = armChain.inverse_kinematics([
-        [1, 1, 1, x],
-        [1, 1, 1, y],
-        [1, 1, 1, z],
-        [0, 0, 0, 1]
-    ])
-    print(ikResults)
-    print(ikResults2)
     # Actuate the 3 first arm motors with the IK results.
     for i in range(3):
         motors[i].setPosition(ikResults[i + 1])
@@ -449,37 +407,34 @@ while supervisor.step(timeStep) != -1 and goal > 0:
             dist.append(min)
     normal = actnormals[index]
     theta = np.arccos(normal[2])
-    print("index:", index)
-    print("vertex:", vertices[index])
-    print("Normal:", actnormals[index])
-    print("theta:", theta);
-    print("dist", min)
-    # Keep the hand orientation down and perpendicular
+    phi = np.arccos(normal[0])
+    gamma = np.arccos(normal[1])
+    # print("index:", index)
+    # print("vertex:", vertices[index])
+    # print("Normal:", actnormals[index])
+    
+    # print("phi:", phi);
+    # print("gamma:", gamma);
+    # print("theta:",  theta);
+    
+    # print("dist", min)
+    forcestr = force_node.getField("customData").getSFString()
+    force = float(forcestr)
+    print("Touch sensor experiencing force of %gN" % (force))
+    
+    # ORIGINAL KEEP HAND DOWN AND PERPENDICULAR
     # motors[4].setPosition(-ikResults[2] - ikResults[3] + math.pi / 2)
     # motors[5].setPosition(ikResults[1])
     
-    # TODO: New # Keep the hand orientation down and perpendicular
-    # normal_vector = [a, b, c]
-    # Call "ikpy" to compute the inverse kinematics of the plane.
-    # ikNormal = armChain.inverse_kinematics([
-        # [1, 0, 0, a],
-        # [0, 1, 0, b],
-        # [0, 0, 1, c],
-        # [0, 0, 0, 1]
-    # ])
-    # print("ikResults[1] ARE: ", ikResults)
-    # NEW: keep hand position perpendicular to the canvas
-    # Keep the hand orientation down and perpendicular
-    # makeBigChange = 100 * (theta - math.pi/2)
-    # print("theta change", makeBigChange)
-    motors[4].setPosition(-ikResults[2] - ikResults[3] + theta) 
+    #New Perpendicular calculation
+    motors[4].setPosition(-ikResults[2] - ikResults[3] + math.pi - phi)
+    #TODOL orient the motor 5 so more inline with surface
     motors[5].setPosition(-ikResults[1])
-    # TODO: end of new segment
     
     # Report Position
-    values = trans_field.getSFVec3f()
+    # values = trans_field.getSFVec3f()
     print("ARM drawing is at position: %g %g %g" % (x, z, y))
-
+    print("Percent Complete %g" % (float(count)/arr_size * 100))
     # Conditions to start/stop drawing and leave this loop.
     # if supervisor.getTime() > 2 * math.pi + 1.5:
     if supervisor.getTime() > finishtime + 0.1:
@@ -488,17 +443,13 @@ while supervisor.step(timeStep) != -1 and goal > 0:
         # Note: start to draw at 1.5 second to be sure the arm is well located.
         supervisor.getPen('pen').write(True)
         startCount = True
-        
-# printDists = ""
-# for i in range (len(dist)):
-    # printDists += str(dist[i]) + ","
 
-print(dist)
-sum = 0
-for i in range(len(dist)):
-    sum += dist[i]
-average = sum / len(dist)
-print("average", average)
+# print(dist)
+# sum = 0
+# for i in range(len(dist)):
+    # sum += dist[i]
+# average = sum / len(dist)
+# print("average", average)
     
 # Loop 2: Move the arm hand to the target.
 print('Move the yellow and black sphere to move the arm...')
@@ -524,13 +475,13 @@ while supervisor.step(timeStep) != -1:
     ])
 
     # Actuate the 3 first arm motors with the IK results.
-    for i in range(3):
-        motors[i].setPosition(ikResults[i + 1])
-        
+    # for i in range(3):
+        # motors[i].setPosition(ikResults[i + 1])
+print("Printing Complete")    
     # Report Position
-    values = trans_field.getSFVec3f()
-    print("ARM is at position: %g %g %g" % (x, y, z))
+    # values = trans_field.getSFVec3f()
+    # print("ARM is at position: %g %g %g" % (x, y, z))
 
 # while supervisor.step(TIME_STEP) != -1:
     # values = trans_field.getSFVec3f()
-    print("ARM is at position: %g %g %g" % (values[0], values[1], values[2]))
+    # print("ARM is at position: %g %g %g" % (values[0], values[1], values[2]))
