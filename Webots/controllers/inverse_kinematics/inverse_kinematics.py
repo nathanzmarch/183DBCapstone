@@ -419,7 +419,14 @@ while supervisor.step(timeStep) != -1 and goal > 0:
     
     phi = np.arccos(normal[0])
     gamma = np.arccos(normal[1])
-    theta = np.arccos(normal[2])
+    if normal[2] > 0 and normal[0] > 0:
+        theta = np.arctan(abs(normal[2]/normal[0]))
+    if normal[2] > 0 and normal[0] < 0:
+        theta = math.pi - np.arctan(abs(normal[2]/normal[0])) 
+    if normal[2] < 0 and normal[0] < 0:
+        theta = math.pi + np.arctan(abs(normal[2]/normal[0]))
+    if normal[2] < 0 and normal[0] > 0:
+        theta = 2 * math.pi - np.arctan(abs(normal[2]/normal[0]))
     
     if(theta > maxtheta):
         maxtheta = theta
@@ -451,12 +458,14 @@ while supervisor.step(timeStep) != -1 and goal > 0:
     # motors[5].setPosition(ikResults[1])
     
     #New Perpendicular calculation
-    motor4 = -ikResults[2] - ikResults[3] + math.pi - phi
+    motor4 = - ikResults[2] - ikResults[3] + math.pi/2 - gamma
+    print("Motor 3: %g"%(theta))
+    print("Motor 4: %g"%(motor4))
     if( motor4 > 2.0944):
         motor4 = 2.0944
     motors[4].setPosition(motor4)
     #TODOL orient the motor 5 so more inline with surface
-    motors[3].setPosition(ikResults[1] + 2*(theta - math.pi/2))
+    motors[3].setPosition(theta)
     # Report Position
     # values = trans_field.getSFVec3f()
     print("ARM drawing is at position: %g %g %g" % (x, z, y))
