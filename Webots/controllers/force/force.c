@@ -17,7 +17,7 @@
  * You may want to add macros here.
  */
 #define SPEED 4
-#define TIME_STEP 64
+#define TIME_STEP 4
 
 /*
  * This is the main program.
@@ -67,13 +67,13 @@ int main(int argc, char **argv) {
      */
      const double force_value = wb_touch_sensor_get_value(force);
 
-    if (force_value > -0.01) {
-      // printf("Detecting a collision of %g N\n", force_value);
-      char s[50] = {0};
-      sprintf(s, "%f", force_value);
-      wb_robot_set_custom_data(s);
+    // if (force_value > -0.01) {
+    printf("Detecting a collision of %g N\n", force_value);
+    char s[50] = {0};
+    sprintf(s, "%f", force_value);
+    wb_robot_set_custom_data(s);
       // movement_counter = 15;
-    }
+    // }
     /*
      * We use the movement_counter to manage the movements of the robot. When
      * the value is 0 we move straight, then when there is another value this

@@ -100,7 +100,7 @@ target = supervisor.getFromDef('TARGET')
 arm = supervisor.getFromDef('ARM')
 trans_field = arm.getField("translation")
 force_node = supervisor.getFromDef('FORCE')
-print(force_node.getField("customData"))
+# print(force_node.getField("customData"))
 # cam1 = supervisor.getCamera("cam1")
 # cam1.enable()
 global finishtime
@@ -108,10 +108,12 @@ count = 0
 startCount = False
 stopGetTime = False
 
+Kp = 0.001
+
 #parse obj
 reComp = re.compile("(?<=^)(v |vn |vt |f )(.*)(?=$)", re.MULTILINE)
 # CHANGE THIS OBJ FILE IF IMPORTING NEW OBJ
-with open("Cylinder_Before_shift.obj") as f:
+with open("Sphere.obj") as f:
     data = [txt.group() for txt in reComp.finditer(f.read())]
 
 v_arr, vn_arr, vt_arr, f_arr = [], [], [], []
@@ -175,7 +177,7 @@ print("norm len: ", len(actnormals))
 # 5 = tattoo on table (inverse_kinematics_tattoo_2d)
 # 6 = Cross on cylinder
 # 7 = Circle on cylinder
-goal = 9
+goal = 10
 noise = 0
 
 # Coordinates for a square on paper
@@ -307,6 +309,9 @@ if goal >= 6:
     elif goal == 9:
         tattoo = np.loadtxt("Tattoo_Curved.txt")
         decimation = 16;
+    elif goal == 10:
+        tattoo = np.loadtxt("Circle_On_Sphere.txt");
+        decimation = 1
         
     tattoo = tattoo[1::decimation]
     
@@ -409,32 +414,49 @@ while supervisor.step(timeStep) != -1 and goal > 0:
     theta = np.arccos(normal[2])
     phi = np.arccos(normal[0])
     gamma = np.arccos(normal[1])
-    # print("index:", index)
-    # print("vertex:", vertices[index])
-    # print("Normal:", actnormals[index])
+    print("index:", index)
+    print("vertex:", vertices[index])
+    print("Normal:", actnormals[index])
     
-    # print("phi:", phi);
-    # print("gamma:", gamma);
-    # print("theta:",  theta);
+    print("phi:", phi);
+    print("gamma:", gamma);
+    print("theta:",  theta);
     
-    # print("dist", min)
-    forcestr = force_node.getField("customData").getSFString()
-    force = float(forcestr)
-    print("Touch sensor experiencing force of %gN" % (force))
+    print("dist", min)
+   
+    
     
     # ORIGINAL KEEP HAND DOWN AND PERPENDICULAR
     # motors[4].setPosition(-ikResults[2] - ikResults[3] + math.pi / 2)
     # motors[5].setPosition(ikResults[1])
     
     #New Perpendicular calculation
-    motors[4].setPosition(-ikResults[2] - ikResults[3] + math.pi - phi)
+    motor4 = -ikResults[2] - ikResults[3] + math.pi - phi
+    if( motor4 > 2.0944):
+        motor4 = 2.0944
+    motors[4].setPosition(motor4)
     #TODOL orient the motor 5 so more inline with surface
-    motors[5].setPosition(-ikResults[1])
+    motors[3].setPosition(ikResults[1] + 2*(theta - math.pi/2))
     
     # Report Position
     # values = trans_field.getSFVec3f()
     print("ARM drawing is at position: %g %g %g" % (x, z, y))
     print("Percent Complete %g" % (float(count)/arr_size * 100))
+    forcestr = force_node.getField("customData").getSFString()
+    force = float(forcestr)
+    print("Touch sensor experiencing force of %gN" % (force))
+    # if(count < arr_size - 2):
+        # error = force - 100
+        # output = Kp * error
+        
+        # x_arr[count+1] += output*normal[0]
+        # y_arr[count+1] += output*normal[2]
+        # z_arr[count+1] += output*normal[1]
+        # x_arr[count+1] += normal[0]
+        # y_arr[count+1] += normal[2]
+        # z_arr[count+1] += normal[1]
+        # count -= 1
+    print("Corrected coords:  %g %g %g" % (x_arr[count], z_arr[count], y_arr[count]) )
     # Conditions to start/stop drawing and leave this loop.
     # if supervisor.getTime() > 2 * math.pi + 1.5:
     if supervisor.getTime() > finishtime + 0.1:

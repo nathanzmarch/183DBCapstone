@@ -7,7 +7,7 @@ centralWidgetVisible: 1
 selectionDisabled: 0
 viewpointLocked: 0
 orthographicViewHeight: 1
-textFiles: 2 "controllers/inverse_kinematics/inverse_kinematics.py" "controllers/objRecController/objRecController.c" "controllers/force/force.c"
+textFiles: 0 "controllers/inverse_kinematics/inverse_kinematics.py" "controllers/objRecController/objRecController.c" "controllers/force/force.c"
 renderingDevicePerspectives: CameraBot2:camera;0;0.788889;0;0
-renderingDevicePerspectives: CameraBot:camera;0;0.788889;0;0
 renderingDevicePerspectives: robot:cam1;1;2.28125;0;0
+renderingDevicePerspectives: CameraBot:camera;0;0.788889;0;0
