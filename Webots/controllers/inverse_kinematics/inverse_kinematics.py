@@ -109,7 +109,12 @@ startCount = False
 stopGetTime = False
 
 Kp = 0.001
-
+maxtheta = 0
+mintheta = 3
+maxphi = 0
+minphi = 3
+maxgamma = 0
+mingamma = 3
 #parse obj
 reComp = re.compile("(?<=^)(v |vn |vt |f )(.*)(?=$)", re.MULTILINE)
 # CHANGE THIS OBJ FILE IF IMPORTING NEW OBJ
@@ -411,16 +416,31 @@ while supervisor.step(timeStep) != -1 and goal > 0:
         if i == len(vertices) - 1:
             dist.append(min)
     normal = actnormals[index]
-    theta = np.arccos(normal[2])
+    
     phi = np.arccos(normal[0])
     gamma = np.arccos(normal[1])
+    theta = np.arccos(normal[2])
+    
+    if(theta > maxtheta):
+        maxtheta = theta
+    if(theta < mintheta):
+        mintheta = theta
+    if(phi > maxphi):
+        maxphi = phi
+    if(phi < minphi):
+        minphi = phi
+    if(gamma > maxgamma):
+        maxgamma = gamma
+    if(gamma < mingamma):
+        mingamma = gamma
+    
     print("index:", index)
     print("vertex:", vertices[index])
     print("Normal:", actnormals[index])
     
-    print("phi:", phi);
-    print("gamma:", gamma);
-    print("theta:",  theta);
+    print("phi: %g min: %g max : %g" % (phi,minphi,maxphi));
+    print("gamma: %g min: %g max : %g" % (gamma,mingamma,maxgamma));
+    print("theta: %g min: %g max : %g" % (theta,mintheta,maxtheta));
     
     print("dist", min)
    
@@ -437,7 +457,6 @@ while supervisor.step(timeStep) != -1 and goal > 0:
     motors[4].setPosition(motor4)
     #TODOL orient the motor 5 so more inline with surface
     motors[3].setPosition(ikResults[1] + 2*(theta - math.pi/2))
-    
     # Report Position
     # values = trans_field.getSFVec3f()
     print("ARM drawing is at position: %g %g %g" % (x, z, y))

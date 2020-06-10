@@ -1,0 +1,20 @@
+#VRML_OBJ R2020a utf8
+Solid {
+  translation 1.2 0.5 5
+  children [
+    Shape {
+      appearance PBRAppearance {
+        metalness 0
+      }
+      geometry Sphere {
+        radius 0.5
+        subdivision 3
+      }
+    }
+  ]
+  name "solid(2)"
+  boundingObject Sphere {
+    radius 0.5
+  }
+  locked TRUE
+}
