@@ -108,7 +108,13 @@ count = 0
 startCount = False
 stopGetTime = False
 
-Kp = 0.001
+Kp = 0.00001
+Kd = 0.000005
+Ki = 0.0001
+errSum = 0
+lastInput = 0
+lastTime = supervisor.getTime()
+
 maxtheta = 0
 mintheta = 3
 maxphi = 0
@@ -118,7 +124,7 @@ mingamma = 3
 #parse obj
 reComp = re.compile("(?<=^)(v |vn |vt |f )(.*)(?=$)", re.MULTILINE)
 # CHANGE THIS OBJ FILE IF IMPORTING NEW OBJ
-with open("Sphere.obj") as f:
+with open("Cylinder_Before_shift.obj") as f:
     data = [txt.group() for txt in reComp.finditer(f.read())]
 
 v_arr, vn_arr, vt_arr, f_arr = [], [], [], []
@@ -182,7 +188,7 @@ print("norm len: ", len(actnormals))
 # 5 = tattoo on table (inverse_kinematics_tattoo_2d)
 # 6 = Cross on cylinder
 # 7 = Circle on cylinder
-goal = 10
+goal = 8
 noise = 0
 
 # Coordinates for a square on paper
@@ -419,53 +425,72 @@ while supervisor.step(timeStep) != -1 and goal > 0:
     
     phi = np.arccos(normal[0])
     gamma = np.arccos(normal[1])
-    if normal[2] > 0 and normal[0] > 0:
-        theta = np.arctan(abs(normal[2]/normal[0]))
-    if normal[2] > 0 and normal[0] < 0:
-        theta = math.pi - np.arctan(abs(normal[2]/normal[0])) 
-    if normal[2] < 0 and normal[0] < 0:
-        theta = math.pi + np.arctan(abs(normal[2]/normal[0]))
-    if normal[2] < 0 and normal[0] > 0:
-        theta = 2 * math.pi - np.arctan(abs(normal[2]/normal[0]))
-    
-    if(theta > maxtheta):
-        maxtheta = theta
-    if(theta < mintheta):
-        mintheta = theta
-    if(phi > maxphi):
-        maxphi = phi
-    if(phi < minphi):
-        minphi = phi
-    if(gamma > maxgamma):
-        maxgamma = gamma
-    if(gamma < mingamma):
-        mingamma = gamma
-    
+    theta = np.arccos(normal[2])
     print("index:", index)
     print("vertex:", vertices[index])
     print("Normal:", actnormals[index])
+    sphere = False
+    if sphere:
+         #perfect continuous rotation
+        if normal[2] < 0 and normal[0] > 0:
+            theta = -2 * math.pi + np.arctan(normal[2]/normal[0])
+        if normal[2] > 0 and normal[0] > 0:
+            theta = -2 * math.pi + np.arctan(normal[2]/normal[0])
+        if normal[2] > 0 and normal[0] < 0:
+            theta = -math.pi + np.arctan(normal[2]/normal[0]) 
+        if normal[2] < 0 and normal[0] < 0:
+            theta = np.arctan(normal[2]/normal[0]) - math.pi
+        #switch directions
+        # if normal[2] < 0 and normal[0] > 0:
+            # theta = -math.pi - np.arctan(normal[2]/normal[0])
+        # if normal[2] > 0 and normal[0] > 0:
+            # theta = -math.pi - np.arctan(normal[2]/normal[0])
+        # if normal[2] > 0 and normal[0] < 0:
+            # theta = -math.pi + np.arctan(normal[2]/normal[0]) 
+        # if normal[2] < 0 and normal[0] < 0:
+            # theta = np.arctan(normal[2]/normal[0]) - math.pi
+            
+            
+        # if normal[2] < 0 and normal[0] > 0:
+            # theta = 2 * math.pi - np.arctan(abs(normal[2]/normal[0]))
+        
+        if(theta > maxtheta):
+            maxtheta = theta
+        if(theta < mintheta):
+            mintheta = theta
+        if(phi > maxphi):
+            maxphi = phi
+        if(phi < minphi):
+            minphi = phi
+        if(gamma > maxgamma):
+            maxgamma = gamma
+        if(gamma < mingamma):
+            mingamma = gamma
+        
+        # print("phi: %g min: %g max : %g" % (phi,minphi,maxphi));
+        # print("gamma: %g min: %g max : %g" % (gamma,mingamma,maxgamma));
+        # print("theta: %g min: %g max : %g" % (theta,mintheta,maxtheta));
+        
+        # print("dist", min)
+        
+        # ORIGINAL KEEP HAND DOWN AND PERPENDICULAR
+        # motors[4].setPosition(-ikResults[2] - ikResults[3] + math.pi / 2)
+        # motors[5].setPosition(ikResults[1])
+        
+        #New Perpendicular calculation
+        motor4 = - ikResults[2] - ikResults[3] + math.pi/2 - 1.2*gamma
+        motor3 = - ikResults[1] - theta - math.pi - 1
+        print("Motor 3: %g"%(motor3))
+        print("Motor 4: %g"%(motor4))
+        if( motor4 > 2.0944):
+            motor4 = 2.0944
+        motors[4].setPosition(motor4)
+        #TODOL orient the motor 5 so more inline with surface
+        motors[3].setPosition(motor3)
+    if(normal[0] > 0):
+         gamma = -gamma
+    motors[4].setPosition(- ikResults[2] - ikResults[3] + math.pi/2 - gamma)
     
-    print("phi: %g min: %g max : %g" % (phi,minphi,maxphi));
-    print("gamma: %g min: %g max : %g" % (gamma,mingamma,maxgamma));
-    print("theta: %g min: %g max : %g" % (theta,mintheta,maxtheta));
-    
-    print("dist", min)
-   
-    
-    
-    # ORIGINAL KEEP HAND DOWN AND PERPENDICULAR
-    # motors[4].setPosition(-ikResults[2] - ikResults[3] + math.pi / 2)
-    # motors[5].setPosition(ikResults[1])
-    
-    #New Perpendicular calculation
-    motor4 = - ikResults[2] - ikResults[3] + math.pi/2 - gamma
-    print("Motor 3: %g"%(theta))
-    print("Motor 4: %g"%(motor4))
-    if( motor4 > 2.0944):
-        motor4 = 2.0944
-    motors[4].setPosition(motor4)
-    #TODOL orient the motor 5 so more inline with surface
-    motors[3].setPosition(theta)
     # Report Position
     # values = trans_field.getSFVec3f()
     print("ARM drawing is at position: %g %g %g" % (x, z, y))
@@ -473,18 +498,28 @@ while supervisor.step(timeStep) != -1 and goal > 0:
     forcestr = force_node.getField("customData").getSFString()
     force = float(forcestr)
     print("Touch sensor experiencing force of %gN" % (force))
-    # if(count < arr_size - 2):
-        # error = force - 100
-        # output = Kp * error
+    now = supervisor.getTime()
+    dt = now - lastTime
+    if(count < arr_size - 2):
+        error = force - 100
+        errSum += error * dt
+        #too much derivative kick for dErr
+        #dErr = ( error - lastErr ) / dt
+        dInput = force - lastInput
         
-        # x_arr[count+1] += output*normal[0]
-        # y_arr[count+1] += output*normal[2]
-        # z_arr[count+1] += output*normal[1]
+        output = Kp * error + Ki * errSum - Kd * dInput
+        
+        x_arr[count+1] += output*normal[0]
+        y_arr[count+1] += output*normal[2]
+        z_arr[count+1] += output*normal[1]
+        
+        lastInput = force
+        lastTime = now
         # x_arr[count+1] += normal[0]
         # y_arr[count+1] += normal[2]
         # z_arr[count+1] += normal[1]
         # count -= 1
-    print("Corrected coords:  %g %g %g" % (x_arr[count], z_arr[count], y_arr[count]) )
+    # print("Corrected coords:  %g %g %g" % (x_arr[count], z_arr[count], y_arr[count]) )
     # Conditions to start/stop drawing and leave this loop.
     # if supervisor.getTime() > 2 * math.pi + 1.5:
     if supervisor.getTime() > finishtime + 0.1:
@@ -511,12 +546,15 @@ while supervisor.step(timeStep) != -1:
     # Compute the position of the target relatively to the arm.
     # x and y axis are inverted because the arm is not aligned with the Webots global axes.
     print("Arm position:", armPosition)
-    x = targetPosition[0] - armPosition[0]
-    y = - (targetPosition[2] - armPosition[2])
-    z = targetPosition[1] - armPosition[1]
-    values = trans_field.getSFVec3f()
+    # x = targetPosition[0] - armPosition[0]
+    # y = - (targetPosition[2] - armPosition[2])
+    # z = targetPosition[1] - armPosition[1]
+    # values = trans_field.getSFVec3f()
     # print("ARM is at position: %g %g %g" % (values[0], values[1], values[2]))
     # Call "ikpy" to compute the inverse kinematics of the arm.
+    x = 1.2
+    y = 1
+    z = 4.8
     ikResults = armChain.inverse_kinematics([
         [1, 0, 0, x],
         [0, 1, 0, y],
@@ -525,8 +563,8 @@ while supervisor.step(timeStep) != -1:
     ])
 
     # Actuate the 3 first arm motors with the IK results.
-    # for i in range(3):
-        # motors[i].setPosition(ikResults[i + 1])
+    for i in range(3):
+        motors[i].setPosition(ikResults[i + 1])
 print("Printing Complete")    
     # Report Position
     # values = trans_field.getSFVec3f()

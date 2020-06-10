@@ -103,21 +103,6 @@ Robot {
           controller "force"
           customData "0.000000"
         }
-        Solid {
-          translation 0 3.28 -0.2
-          children [
-            Shape {
-              appearance BrushedAluminium {
-              }
-              geometry Sphere {
-                radius 0.2
-              }
-            }
-          ]
-          recognitionColors [
-            0 1 0
-          ]
-        }
         Pen {
           translation 0 0 0.02
           rotation 1 0 0 -1.5708
@@ -228,7 +213,7 @@ DEF TARGET Solid {
   ]
 }
 Door {
-  hidden translation_5 1.3574784629710734e-09 0 0.0010000043275303905
+  hidden translation_5 1.3574785184822247e-09 0 0.0010000043275303627
   translation 10.04 3.27 4
   rotation 0 1 0 4.7123889
   name "door(1)"
@@ -255,7 +240,7 @@ OilBarrel {
   rotation 0 -1 0 0.3403392
 }
 Door {
-  hidden translation_5 1.357483181418928e-09 0 0.0010000043275451842
+  hidden translation_5 1.3574832369300793e-09 0 0.0010000043275451564
   translation -10.05 0.02 0
   rotation 0 1 0 1.5707963
   position -9.893781541896816e-09
@@ -352,8 +337,8 @@ WoodenBox {
 }
 LeverValve {
   hidden position_0_0 -4.879113506455377e-08
-  hidden translation_1 0 -1.700029006457271e-16 -2.549732920226301e-09
-  hidden rotation_1 -0.9999999999999999 0 0 1.4292691717483762e-07
+  hidden translation_1 0 -1.7694179454963432e-16 -2.5497329202263003e-09
+  hidden rotation_1 -1 0 0 1.4292691717483762e-07
   translation -7.5791585 0.692 -3
   rotation 0 1 0 1.5707963
 }
@@ -405,7 +390,7 @@ PipeSection {
 }
 SmallValve {
   hidden position_0_0 -15.706000090926246
-  hidden translation_1 -0.00600000000000001 -0.020399999999999988 9.274477101155762e-10
+  hidden translation_1 -0.006000000000000006 -0.020399999999999988 9.274477101155762e-10
   hidden rotation_1 -1 0 0 3.141629490924412
   translation -4.8638332 0.707 -3
   rotation 0 1 0 1.5707963
@@ -438,12 +423,12 @@ Cabinet {
   hidden rotation_6 0.9900699162189988 4.0077788783055856e-08 -0.14057581939332014 5.3353378393928986e-05
   hidden position_6_0 -0.006363256619896392
   hidden translation_7 -3.9151256306879656e-05 0 0.0062413113369997695
-  hidden rotation_7 0 -1 0 0.012545678520246743
+  hidden rotation_7 0 -1 0 0.012545678520175947
   hidden translation_10 0.5000000000916482 0.7498610302316887 0.4999999993388555
   hidden rotation_10 -0.990069891311317 4.007766503387711e-08 -0.14057599481702204 -5.3353377580827866e-05
   hidden position_10_0 0.006363256565754874
-  hidden translation_11 3.915125411757536e-05 0 0.006241311162409304
-  hidden rotation_11 0 0.9999999999999999 0 0.012545678168425861
+  hidden translation_11 3.915125411740883e-05 0 0.006241311162409306
+  hidden rotation_11 0 1 0 0.012545678168355065
   translation 1.49 0 -3.84
   columnsWidths [
     1, 1
